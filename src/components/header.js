@@ -1,42 +1,66 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Box, Button, Flex, Heading, Text } from "@chakra-ui/core";
+import React from "react";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
+const MenuItems = ({ children }) => (
+  <Text mt={{ base: 4, md: 0 }} mr={6} display="block">
+    {children}
+  </Text>
+);
+
+const Header = props => {
+  const [show, setShow] = React.useState(false);
+  const handleToggle = () => setShow(!show);
+
+  return (
+    <Flex
+      as="nav"
+      align="center"
+      justify="space-between"
+      wrap="wrap"
+      padding="1.5rem"
+      bg="teal.500"
+      color="white"
+      {...props}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
+      <Flex align="center" mr={5}>
+        <Heading as="h1" size="lg" color='grey'>
+          Chakra UI
+        </Heading>
+      </Flex>
+
+      <Box display={{ sm: "block", md: "none" }} onClick={handleToggle}>
+        <svg
+          fill="black"
+          width="12px"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
         >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </Box>
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+      <Box
+        display={{ sm: show ? "block" : "none", md: "flex" }}
+        width={{ sm: "full", md: "auto" }}
+        alignItems="center"
+        flexGrow={1}
+      >
+        <MenuItems>Docs</MenuItems>
+        <MenuItems>Examples</MenuItems>
+        <MenuItems>Blog</MenuItems>
+      </Box>
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
+      <Box
+        display={{ sm: show ? "block" : "none", md: "block" }}
+        mt={{ base: 4, md: 0 }}
+      >
+        <Button bg="blue" border="1px">
+          Create account
+        </Button>
+      </Box>
+    </Flex>
+  );
+};
 
-export default Header
+export default Header;
