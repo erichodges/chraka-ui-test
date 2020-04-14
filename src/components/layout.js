@@ -10,7 +10,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import Header from "./header";
-import theme from "./theme";
+import newTheme from "./newTheme";
 
 
 const Layout = ({ children }) => {
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={newTheme}>
       <CSSReset />
       <Header siteTitle={data.site.siteMetadata.title} />
       <div

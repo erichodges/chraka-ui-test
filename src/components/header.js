@@ -2,7 +2,7 @@ import { Box, Button, Flex, Heading, Text } from "@chakra-ui/core";
 import React from "react";
 
 const MenuItems = ({ children }) => (
-  <Text mt={{ base: 4, md: 0 }} mr={6} display="block">
+  <Text mt={{ base: 4, md: 0 }} mr={6} display="block" color='sec'>
     {children}
   </Text>
 );
@@ -23,14 +23,14 @@ const Header = props => {
       {...props}
     >
       <Flex align="center" mr={5}>
-        <Heading as="h1" size="lg" color='grey'>
+        <Heading as="h1" size="lg" color='pri'>
           Chakra UI
         </Heading>
       </Flex>
 
       <Box display={{ sm: "block", md: "none" }} onClick={handleToggle}>
         <svg
-          fill="black"
+          fill="white"
           width="12px"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ const Header = props => {
       </Box>
 
       <Box
-        display={{ sm: show ? "block" : "none", md: "flex" }}
+        display={{ sm: show? "block" : "none", md: "flex" }}
         width={{ sm: "full", md: "auto" }}
         alignItems="center"
         flexGrow={1}
@@ -52,7 +52,7 @@ const Header = props => {
       </Box>
 
       <Box
-        display={{ sm: show ? "block" : "none", md: "block" }}
+        display={{ sm: show? "block" : "none", md: "block" }}
         mt={{ base: 4, md: 0 }}
       >
         <Button bg="blue" border="1px">

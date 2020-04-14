@@ -1,6 +1,6 @@
 // example theme.js
 export default {
-    breakpoints: ["30rem", "48rem", "62rem", "80rem"],
+    breakpoints: ["360px", "768px", "1024px", "1440px"],
     fonts: {
       heading: '"system-ui", sans-serif',
       body: "system-ui, sans-serif",
@@ -19,9 +19,12 @@ export default {
       "6xl": "4rem",
     },
     colors: {
-      transparent: "transparent",
+      pri: '#fff',
+      sec: '#fafafa',
+      menu: '#fcfcfc',
+      clear: "transparent",
       black: "#000",
-      white: "#fff",
+      white: "#fafafa",
       whiteAlpha: {
         900: "#fafafa"
       },
