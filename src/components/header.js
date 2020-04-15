@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Text, useColorMode } from "@chakra-ui/core";
+import { Box, Flex, Heading, IconButton, Text, useColorMode } from "@chakra-ui/core";
 import React from "react";
 
 const MenuItems = ({ children }) => (
@@ -20,7 +20,7 @@ const Header = props => {
       wrap="wrap"
       padding="1.5rem"
       bg={colorMode === "light"? "grey.600" : "grey.800"}
-      color={colorMode === "light"? "black" : "#cccccc"}
+      color={colorMode === "light"? "black" : "#ccc"}
       {...props}
     >
       <Flex align="center" mr={5}>
@@ -56,9 +56,20 @@ const Header = props => {
         display={{ sm: show? "block" : "none", md: "block" }}
         mt={{ base: 4, md: 0 }}
       >
-      <Button bg={colorMode === "light"? "grey.200" : "grey.800"} onClick={toggleColorMode}>
+      {/* <Button bg={colorMode === "light"? "grey.200" : "grey.800"} onClick={toggleColorMode}>
       {colorMode}
-      </Button>
+      </Button> */}
+      <IconButton
+              aria-label={`Switch to ${
+                colorMode === "light" ? "dark" : "light"
+              } mode`}
+              variant="ghost"
+              color="current"
+              ml="2"
+              fontSize="20px"
+              onClick={toggleColorMode}
+              icon={colorMode === "light" ? "sun" : "moon"}
+            />
       </Box>
     </Flex>
   );
