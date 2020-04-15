@@ -1,4 +1,4 @@
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/core";
+import { Box, Button, Flex, Heading, Text, useColorMode } from "@chakra-ui/core";
 import React from "react";
 
 const MenuItems = ({ children }) => (
@@ -8,6 +8,7 @@ const MenuItems = ({ children }) => (
 );
 
 const Header = props => {
+  const { colorMode, toggleColorMode } = useColorMode();
   const [show, setShow] = React.useState(false);
   const handleToggle = () => setShow(!show);
 
@@ -55,9 +56,10 @@ const Header = props => {
         display={{ sm: show? "block" : "none", md: "block" }}
         mt={{ base: 4, md: 0 }}
       >
-        <Button bg="blue" border="1px">
-          Create account
-        </Button>
+      <Text mb={3}>Color mode: {colorMode}</Text>
+      <Button variantColor="teal" onClick={toggleColorMode}>
+        Toggle color mode
+      </Button>
       </Box>
     </Flex>
   );

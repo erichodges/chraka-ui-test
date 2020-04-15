@@ -5,12 +5,14 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import { CSSReset, ThemeProvider } from "@chakra-ui/core";
+import { ColorModeProvider, CSSReset, theme, ThemeProvider } from "@chakra-ui/core";
 import { graphql, useStaticQuery } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import Header from "./header";
-import newTheme from "./newTheme";
+
+// import newTheme from "./newTheme";
+
 
 
 const Layout = ({ children }) => {
@@ -26,8 +28,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <ThemeProvider theme={newTheme}>
+      <ThemeProvider theme={theme}>
       <CSSReset />
+      <ColorModeProvider>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -43,6 +46,7 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
       </div>
+      </ColorModeProvider>
       </ThemeProvider>
     </>
   )
