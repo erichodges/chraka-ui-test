@@ -23,54 +23,54 @@ const Header = props => {
       color={colorMode === "light"? "black" : "#ccc"}
       {...props}
     >
-      <Flex align="center" mr={5}>
-        <Heading as="h1" size="lg" color='pri'>
-          Chakra UI
-        </Heading>
+      <Flex  align="center" >
+        <Box mt={1} display={{ sm: "block", md: "none" }} onClick={handleToggle}>
+          <svg
+            fill="white"
+            width="12px"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <title>Menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+          </svg>
+        </Box>
+        <Flex align="center" mr={5} ml={5}>
+          <Heading as="h1" size="lg" color='pri'>
+            useAuth
+          </Heading>
+        </Flex>
       </Flex>
 
-      <Box display={{ sm: "block", md: "none" }} onClick={handleToggle}>
-        <svg
-          fill="white"
-          width="12px"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <title>Menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-        </svg>
-      </Box>
 
       <Box
         display={{ sm: show? "block" : "none", md: "flex" }}
         width={{ sm: "full", md: "auto" }}
         alignItems="center"
-        flexGrow={1}
+        // flexGrow={1}
       >
         <MenuItems>Docs</MenuItems>
         <MenuItems>Examples</MenuItems>
         <MenuItems>Blog</MenuItems>
+        <Box
+          display={{ sm: show? "block" : "none", md: "block" }}
+          mt={{ base: 4, md: 0 }}
+        >
+          <IconButton
+            aria-label={`Switch to ${
+              colorMode === "light" ? "dark" : "light"
+            } mode`}
+            variant="ghost"
+            color="current"
+            ml="2"
+            fontSize="20px"
+            onClick={toggleColorMode}
+            icon={colorMode === "light" ? "sun" : "moon"}
+          />
+         </Box>
       </Box>
 
-      <Box
-        display={{ sm: show? "block" : "none", md: "block" }}
-        mt={{ base: 4, md: 0 }}
-      >
-      {/* <Button bg={colorMode === "light"? "grey.200" : "grey.800"} onClick={toggleColorMode}>
-      {colorMode}
-      </Button> */}
-      <IconButton
-              aria-label={`Switch to ${
-                colorMode === "light" ? "dark" : "light"
-              } mode`}
-              variant="ghost"
-              color="current"
-              ml="2"
-              fontSize="20px"
-              onClick={toggleColorMode}
-              icon={colorMode === "light" ? "sun" : "moon"}
-            />
-      </Box>
+     
     </Flex>
   );
 };
