@@ -56,9 +56,8 @@ const Header = props => {
         display={{ sm: show? "block" : "none", md: "block" }}
         mt={{ base: 4, md: 0 }}
       >
-      <Text mb={3}>Color mode: {colorMode}</Text>
       <Button variantColor="teal" onClick={toggleColorMode}>
-        Toggle color mode
+      {colorMode}
       </Button>
       </Box>
     </Flex>
