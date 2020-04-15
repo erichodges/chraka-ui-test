@@ -19,8 +19,8 @@ const Header = props => {
       justify="space-between"
       wrap="wrap"
       padding="1.5rem"
-      bg="teal.500"
-      color="white"
+      bg={colorMode === "light"? "grey.600" : "grey.800"}
+      color={colorMode === "light"? "black" : "#cccccc"}
       {...props}
     >
       <Flex align="center" mr={5}>
@@ -56,7 +56,7 @@ const Header = props => {
         display={{ sm: show? "block" : "none", md: "block" }}
         mt={{ base: 4, md: 0 }}
       >
-      <Button variantColor="teal" onClick={toggleColorMode}>
+      <Button bg={colorMode === "light"? "grey.200" : "grey.800"} onClick={toggleColorMode}>
       {colorMode}
       </Button>
       </Box>
