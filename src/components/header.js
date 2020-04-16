@@ -50,8 +50,8 @@ const Header = props => {
         // flexGrow={1}
       >
         <MenuItems>Docs</MenuItems>
-        <MenuItems>Examples</MenuItems>
-        <MenuItems>Blog</MenuItems>
+        {/* <MenuItems>Examples</MenuItems> */}
+        <MenuItems>GitHub</MenuItems>
         <Box
           display={{ sm: show? "block" : "none", md: "block" }}
           mt={{ base: 4, md: 0 }}
@@ -60,6 +60,8 @@ const Header = props => {
             aria-label={`Switch to ${
               colorMode === "light" ? "dark" : "light"
             } mode`}
+            isRound="true"
+            border-top-color="green !important"
             variant="ghost"
             color="current"
             ml="2"
