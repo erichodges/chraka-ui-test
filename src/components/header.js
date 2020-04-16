@@ -26,7 +26,7 @@ const Header = props => {
       <Flex  align="center" >
         <Box mt={1} display={{ sm: "block", md: "none" }} onClick={handleToggle}>
           <svg
-            fill="white"
+            fill={colorMode === "light"? "black" : "white"}
             width="12px"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
