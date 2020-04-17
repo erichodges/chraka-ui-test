@@ -18,7 +18,7 @@ const Header = props => {
       align="center"
       justify="space-between"
       wrap="wrap"
-      padding="1.5rem"
+      padding=".6rem"
       bg={colorMode === "light"? "grey.600" : "grey.800"}
       color={colorMode === "light"? "black" : "#ccc"}
       {...props}
