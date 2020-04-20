@@ -14,6 +14,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-chakra-ui`,
+    `gatsby-plugin-mdx`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
