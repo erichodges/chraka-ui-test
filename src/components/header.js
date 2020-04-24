@@ -37,7 +37,7 @@ const Header = props => {
         </Box>
         <Flex align="center" mr={5} ml={5}>
           <Heading as="h1" size="lg" color='pri'>
-            useAuth
+            C-UI test
           </Heading>
         </Flex>
       </Flex>

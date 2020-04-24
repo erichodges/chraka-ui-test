@@ -9,7 +9,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Box bg="blue.800" h="91vh" w="100vw">
-    <Heading as="h3" size="xl">useAuth</Heading>
+    <Heading as="h3" size="xl">Test Heading</Heading>
     </Box>
     <Heading as="h3" size="xl">Hi people</Heading>
     <Text fontSize="xl">Welcome to your new Gatsby site.</Text>

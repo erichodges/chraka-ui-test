@@ -1,7 +1,9 @@
+// import MDXProvider from '@mdx-js/mdx'
 import { Link } from "gatsby"
 import React from "react"
 import Layout from '../components/docsLayout'
 import SEO from "../components/seo"
+// import './docs/test'
 
 const SecondPage = () => (
   <Layout>
