@@ -1,4 +1,5 @@
 import { Box, Flex, Heading, IconButton, Text, useColorMode } from "@chakra-ui/core";
+import { Link } from "gatsby";
 import React from "react";
 
 const MenuItems = ({ children }) => (
@@ -42,14 +43,15 @@ const Header = props => {
         </Flex>
       </Flex>
 
-
       <Box
         display={{ sm: show? "block" : "none", md: "flex" }}
         width={{ sm: "full", md: "auto" }}
         alignItems="center"
         // flexGrow={1}
       >
+        <Link to="/docs/">
         <MenuItems>Docs</MenuItems>
+        </Link>
         {/* <MenuItems>Examples</MenuItems> */}
         <MenuItems>GitHub</MenuItems>
         <Box
