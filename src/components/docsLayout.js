@@ -9,10 +9,11 @@ import { ColorModeProvider, CSSReset, theme, ThemeProvider } from "@chakra-ui/co
 import { css, Global } from '@emotion/core';
 import 'focus-visible/dist/focus-visible';
 import React from "react";
+import Header from "./header";
 
 const GlobalStyles = css`
   /*
-    This will hide the focus indicator if the element receives focus    via the mouse,
+    This will hide the focus indicator if the element receives focus via the mouse,
     but it will still show up on keyboard focus.
   */
   .js-focus-visible :focus:not([data-focus-visible-added]) {
@@ -33,7 +34,7 @@ const Layout = ({ children }) => {
       <CSSReset />
       <Global styles={GlobalStyles} />
       <ColorModeProvider>
-      
+      <Header />
       <div>
         <main>{children}</main>
         <footer>

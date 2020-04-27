@@ -37,9 +37,10 @@ const Header = props => {
           </svg>
         </Box>
         <Flex align="center" mr={5} ml={5}>
-          <Heading as="h1" size="lg" color='pri'>
+          <Link to='/'><Heading as="h1" size="lg" color='pri'>
             C-UI test
           </Heading>
+          </Link>
         </Flex>
       </Flex>
 
@@ -49,7 +50,7 @@ const Header = props => {
         alignItems="center"
         // flexGrow={1}
       >
-        <Link to="/docs/">
+        <Link to="/docs/test">
         <MenuItems>Docs</MenuItems>
         </Link>
         {/* <MenuItems>Examples</MenuItems> */}
