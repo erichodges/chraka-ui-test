@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import { ColorModeProvider, CSSReset, theme, ThemeProvider } from "@chakra-ui/core";
 import { css, Global } from '@emotion/core';
 import 'focus-visible/dist/focus-visible';
@@ -26,7 +19,6 @@ const GlobalStyles = css`
 
 
 const Layout = ({ children }) => {
-
 
   return (
     <>

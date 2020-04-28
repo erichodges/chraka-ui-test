@@ -1,6 +1,7 @@
-import { Box, Flex, Heading, IconButton, Text, useColorMode } from "@chakra-ui/core";
+import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, Heading, IconButton, Input, Text, useColorMode, useDisclosure } from "@chakra-ui/core";
 import { Link } from "gatsby";
 import React from "react";
+
 
 const MenuItems = ({ children }) => (
   <Text mt={{ base: 4, md: 0 }} mr={6} display="block" color='sec'>
@@ -12,6 +13,8 @@ const Header = props => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [show, setShow] = React.useState(false);
   const handleToggle = () => setShow(!show);
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const btnRef = React.useRef();
 
   return (
     <Flex
@@ -37,6 +40,35 @@ const Header = props => {
           </svg>
         </Box>
         <Flex align="center" mr={5} ml={5}>
+          
+          <Button ref={btnRef} onClick={onOpen}>
+            D
+          </Button>
+          
+          <Drawer
+          isOpen={isOpen}
+          placement="right"
+          onClose={onClose}
+          finalFocusRef={btnRef}
+          >
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerCloseButton />
+            <DrawerHeader>Create your account</DrawerHeader>
+  
+            <DrawerBody>
+              <Input placeholder="Type here..." />
+            </DrawerBody>
+  
+            <DrawerFooter>
+              <Button variant="outline" mr={3} onClick={onClose}>
+                Cancel
+              </Button>
+              <Button color="blue">Save</Button>
+            </DrawerFooter>
+          </DrawerContent>
+        </Drawer>
+
           <Link to='/'><Heading as="h1" size="lg" color='pri'>
             C-UI test
           </Heading>
