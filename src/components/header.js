@@ -1,7 +1,8 @@
+/** @jsx jsx */
 import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, Heading, IconButton, Input, Text, useColorMode, useDisclosure } from "@chakra-ui/core";
+import { css, jsx } from '@emotion/core';
 import { Link } from "gatsby";
 import React from "react";
-
 
 const MenuItems = ({ children }) => (
   <Text mt={{ base: 4, md: 0 }} mr={6} display="block" color='sec'>
@@ -12,7 +13,7 @@ const MenuItems = ({ children }) => (
 const Header = props => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [show, setShow] = React.useState(false);
-  const handleToggle = () => setShow(!show);
+  // const handleToggle = () => setShow(!show);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
@@ -28,7 +29,7 @@ const Header = props => {
       {...props}
     >
       <Flex  align="center" >
-        <Box mt={1} display={{ sm: "block", md: "none" }} onClick={handleToggle}>
+        <Box mt={1} display={{ sm: "block", md: "none" }} ref={btnRef} onClick={onOpen} css={css`cursor: pointer;`}>
           <svg
             fill={colorMode === "light"? "black" : "white"}
             width="12px"
@@ -41,13 +42,13 @@ const Header = props => {
         </Box>
         <Flex align="center" mr={5} ml={5}>
           
-          <Button ref={btnRef} onClick={onOpen}>
+          {/* <Button ref={btnRef} onClick={onOpen}>
             D
-          </Button>
+          </Button> */}
           
           <Drawer
           isOpen={isOpen}
-          placement="right"
+          placement="left"
           onClose={onClose}
           finalFocusRef={btnRef}
           >
