@@ -10,7 +10,7 @@ const MenuItems = ({ children }) => (
   </Text>
 );
 
-const Header = props => {
+const DocsHeader = props => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [show, setShow] = React.useState(false);
   const handleToggle = () => setShow(!show);
@@ -109,4 +109,4 @@ const Header = props => {
   );
 };
 
-export default Header;
+export default DocsHeader;

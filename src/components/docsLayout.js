@@ -2,7 +2,7 @@ import { ColorModeProvider, CSSReset, theme, ThemeProvider } from "@chakra-ui/co
 import { css, Global } from '@emotion/core';
 import 'focus-visible/dist/focus-visible';
 import React from "react";
-import Header from "./header";
+import DocsHeader from "./Docsheader";
 
 const GlobalStyles = css`
   /*
@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
       <CSSReset />
       <Global styles={GlobalStyles} />
       <ColorModeProvider>
-      <Header />
+      <DocsHeader />
       <div>
         <main>{children}</main>
         <footer>
