@@ -26,7 +26,7 @@ export const GlobalStyles = css`
 
     .body {
         display: grid;
-        grid-template-columns: 1fr 3fr;
+        grid-template-columns: .75fr 3fr;
         overflow: hidden;
     }
 
@@ -38,8 +38,6 @@ export const GlobalStyles = css`
         border-top: 1px solid lightgrey;
     }
 
-
-
     .content {
     overflow-y: scroll;
     padding: 20px;
@@ -47,6 +45,7 @@ export const GlobalStyles = css`
 
     p {
     max-width: 600px;
+    padding-bottom: 2rem;
     }
 `;
 

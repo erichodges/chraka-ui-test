@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
       <div className="container">
       <div className="body">
         <div className="sidebar">Sidebar</div>
-        <div>{children}</div>        
+        <div className="content">{children}</div>        
       </div>
       <footer>
           <h3>docs footer</h3>
