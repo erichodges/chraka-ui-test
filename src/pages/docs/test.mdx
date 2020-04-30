@@ -1,16 +1,70 @@
-# Test MDX file
+# Getting Started
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In nibh mauris cursus mattis molestie a iaculis at. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac. Turpis cursus in hac habitasse platea dictumst quisque. Quis lectus nulla at volutpat. Amet aliquam id diam maecenas ultricies mi eget. Mi proin sed libero enim sed. Malesuada bibendum arcu vitae elementum curabitur vitae. Suscipit adipiscing bibendum est ultricies integer quis auctor elit sed. Et odio pellentesque diam volutpat commodo sed egestas egestas fringilla. Consequat mauris nunc congue nisi vitae suscipit tellus. Purus in massa tempor nec feugiat nisl pretium fusce. Congue nisi vitae suscipit tellus mauris a diam maecenas sed. Sed elementum tempus egestas sed sed risus pretium quam. Nisl pretium fusce id velit ut. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas. Felis donec et odio pellentesque diam volutpat commodo sed egestas. Aenean vel elit scelerisque mauris.
+useAuth is designed to be quick to setup. You'll need an Auth0 account with an app domain and client id.
 
 
-Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Integer vitae justo eget magna fermentum iaculis. Vel quam elementum pulvinar etiam. Nisi porta lorem mollis aliquam ut porttitor. Quis commodo odio aenean sed adipiscing. Suscipit adipiscing bibendum est ultricies. Donec pretium vulputate sapien nec sagittis. Tortor aliquam nulla facilisi cras fermentum. Neque aliquam vestibulum morbi blandit cursus risus at. Mauris sit amet massa vitae tortor condimentum lacinia quis vel. Sit amet volutpat consequat mauris nunc congue nisi vitae suscipit. Mauris sit amet massa vitae tortor condimentum lacinia. Ac tortor vitae purus faucibus ornare suspendisse. Ut placerat orci nulla pellentesque dignissim enim sit amet venenatis. Varius morbi enim nunc faucibus. Auctor eu augue ut lectus arcu bibendum at. Turpis in eu mi bibendum neque. Et ultrices neque ornare aenean. Quis blandit turpis cursus in. Mi eget mauris pharetra et ultrices neque.
+## 1 Install the hook
 
 
-In mollis nunc sed id semper risus. Elementum facilisis leo vel fringilla est. Rutrum tellus pellentesque eu tincidunt tortor aliquam. Dui nunc mattis enim ut. Scelerisque varius morbi enim nunc faucibus a. Congue quisque egestas diam in arcu cursus euismod. Non pulvinar neque laoreet suspendisse. Pharetra magna ac placerat vestibulum lectus mauris ultrices eros. Ut tortor pretium viverra suspendisse potenti. Integer quis auctor elit sed vulputate mi sit. Semper auctor neque vitae tempus quam pellentesque nec. Felis imperdiet proin fermentum leo vel orci porta non. Feugiat in ante metus dictum at tempor commodo. Vitae et leo duis ut diam quam. Eu consequat ac felis donec et odio pellentesque diam. Urna nunc id cursus metus.
+Downloads from npm, adds to your package.json, etc. You can use npmas well.
 
 
-Eget nullam non nisi est sit amet. Vel pretium lectus quam id. Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Donec ultrices tincidunt arcu non sodales neque sodales. Adipiscing elit pellentesque habitant morbi tristique senectus. Orci eu lobortis elementum nibh tellus molestie. Mattis enim ut tellus elementum sagittis vitae. Eu scelerisque felis imperdiet proin. Hac habitasse platea dictumst vestibulum. Commodo viverra maecenas accumsan lacus. Et malesuada fames ac turpis egestas integer eget aliquet. Maecenas ultricies mi eget mauris pharetra et. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi. Sed risus ultricies tristique nulla aliquet enim.
+## 2 Set up AuthProvider
 
 
-Urna molestie at elementum eu. Sed blandit libero volutpat sed cras ornare arcu dui. Iaculis urna id volutpat lacus laoreet non. Fames ac turpis egestas maecenas pharetra convallis posuere. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Sociis natoque penatibus et magnis. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Cras fermentum odio eu feugiat pretium nibh ipsum consequat nisl. Sed arcu non odio euismod lacinia at quis. Ultricies lacus sed turpis tincidunt id aliquet risus feugiat in. Nam libero justo laoreet sit. Et molestie ac feugiat sed lectus vestibulum. Iaculis at erat pellentesque adipiscing. Vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant.
+useAuth uses an AuthProvidercomponent to configure the Auth0 client and share state between components. It's using React context with a reducer behind the scenes, but that's an implementation detail.
+
+I recommend adding this around your root component. In Gatsby that's done in gatsby-browser.jsand gatsby-ssr.js. Yes useAuthis built so it doesn't break server-side rendering. ✌️
+
+But of course server-side "you" will always be logged out.
+
+AuthProvider creates a context, sets up a state reducer, initializes an Auth0 client and so on. Everything you need for authentication to work in your whole app :)
+
+The API takes a couple config options:
+
+navigate– your navigation function, used for redirects. I've tested with Gatsby, but anything should work
+auth0_domain– from your Auth0 app
+auth0_client_id– from your Auth0 app
+auth0_params– an object that lets you overwrite any of the default Auth0 client parameters
+PS: even though Auth doesn't do anything server-side, useAuth will throw errors during build, if its context doesn't exist
+
+By default useAuth's Auth0 client uses these params:
+
+- code here
+
+domainand clientIDcome from your props.
+
+redirectUriis set to use the auth0_callbackpage on the current domain. Auth0 redirects here after users login so you can set cookies and stuff. useAuthwill handle this for you ✌️
+
+audienceis set to use api/v2. I know this is necessary but honestly have been copypasting it through several of my projects.
+
+responseTypesame here. I copy paste this from old projects so I figured it's a good default.
+
+scopeyou need openidfor social logins and to be able to fetch user profiles after authentication. Profile and Email too. You can add more via the auth0_paramsoverride.
+
+## 3 Create the callback page
+
+
+Auth0 and most other authentication providers use OAuth. That requires redirecting your user to their login form. After login, the provider redirects the user back to your app.
+
+Any way of creating React pages should work, here's what I use for Gatsby.
+
+The goal is to load a page, briefly show some text, and run the handleAuthenticationmethod from useAuthon page load.
+
+That method will create a cookie in local storage with your user's information and redirect back to homepage. Redirecting to other post-login pages currently isn't supported but is a good idea now that I thought of it 🤔
+
+PS: Make sure you add domain/auth0_callbackas a valid callback URL in your Auth0 config
+
+## 4 Enoy useAuth
+
+
+You're ready to use useAuthfor authentication in your React app.
+
+Here's a login button for example:
+
+isAuthenticated is a method that checks if the user's cookie is still valid. loginand logouttrigger their respective actions.
+
+You can even say hello to your users
+
+Check isAuthenticatedthen use the user object. Simple as that.

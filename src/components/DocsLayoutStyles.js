@@ -61,5 +61,9 @@ export const DocsStyles = css`
       font-weight: bold; 
       padding-bottom: 1rem;
     }
+
+    .sidenav {
+      list-style-type: none;
+    }
 `;
 

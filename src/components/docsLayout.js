@@ -2,6 +2,7 @@
 import { Box, ColorModeProvider, CSSReset, theme, ThemeProvider } from "@chakra-ui/core";
 import { Global } from '@emotion/core';
 import 'focus-visible/dist/focus-visible';
+import { Link } from "gatsby";
 import React from "react";
 import DocsHeader from "./Docsheader";
 import { DocsStyles } from "./DocsLayoutStyles";
@@ -17,7 +18,18 @@ const Layout = ({ children }) => {
       <DocsHeader />
       <Box className="container">
       <Box className="body">
-        <Box display={{ sm: 'none', md: 'block' }} className="sidebar">Sidebar</Box>
+        <Box ml={4} display={{ sm: 'none', md: 'block' }} className="sidebar">
+          <ul className='sidenav'>
+            <li>
+              <Link to="/docs/test">
+                  Getting Started
+              </Link>
+            </li>
+            <li>AuthProvider</li>
+            <li>Callback page</li>
+            <li>Enoy</li>
+          </ul>
+        </Box>
         <Box fontSize={["sm", "md", "lg", "xl"]} maxW="36rem" pl='2rem' pr='1rem'     width={{sm: 'full'}} display='block' className="content">{children}</Box>        
       </Box>
       <Box>

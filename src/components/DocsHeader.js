@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, Heading, IconButton, Input, Text, useColorMode, useDisclosure } from "@chakra-ui/core";
+import { Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, Heading, IconButton, Text, useColorMode, useDisclosure } from "@chakra-ui/core";
 import { css, jsx } from '@emotion/core';
 import { Link } from "gatsby";
 import React from "react";
@@ -12,8 +12,8 @@ const MenuItems = ({ children }) => (
 
 const DocsHeader = props => {
   const { colorMode, toggleColorMode } = useColorMode();
-  const [show, setShow] = React.useState(false);
-  const handleToggle = () => setShow(!show);
+//   const [show, setShow] = React.useState(false);
+//   const handleToggle = () => setShow(!show);
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
@@ -51,17 +51,16 @@ const DocsHeader = props => {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader>Create your account</DrawerHeader>
+            <DrawerHeader>Docs</DrawerHeader>
   
             <DrawerBody>
-              <Input placeholder="Type here..." />
+            <Link to="/docs/test">
+              Getting Started
+            </Link>
             </DrawerBody>
   
             <DrawerFooter>
-              <Button variant="outline" mr={3} onClick={onClose}>
-                Cancel
-              </Button>
-              <Button color="blue">Save</Button>
+              Drawer Footer content
             </DrawerFooter>
           </DrawerContent>
         </Drawer>

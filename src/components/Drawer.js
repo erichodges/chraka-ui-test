@@ -1,4 +1,4 @@
-import { Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Input, useDisclosure } from "@chakra-ui/core";
+import { Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, useDisclosure } from "@chakra-ui/core";
 import React from 'react';
 
 
@@ -10,24 +10,23 @@ export default function ChakraDrawer() {
       <>
         <Drawer
           isOpen={isOpen}
-          placement="right"
+          placement="left"
           onClose={onClose}
           finalFocusRef={btnRef}
         >
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader>Create your account</DrawerHeader>
+            <DrawerHeader>Docs</DrawerHeader>
   
             <DrawerBody>
-              <Input placeholder="Type here..." />
+              test text here dude
             </DrawerBody>
   
             <DrawerFooter>
               <Button variant="outline" mr={3} onClick={onClose}>
                 Cancel
               </Button>
-              <Button color="blue">Save</Button>
             </DrawerFooter>
           </DrawerContent>
         </Drawer>
