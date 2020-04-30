@@ -20,14 +20,11 @@ const Layout = ({ children }) => {
       <Box className="body">
         <Box ml={4} display={{ sm: 'none', md: 'block' }} className="sidebar">
           <ul className='sidenav'>
-            <li>
-              <Link to="/docs/test">
-                  Getting Started
-              </Link>
-            </li>
-            <li>AuthProvider</li>
-            <li>Callback page</li>
-            <li>Enoy</li>
+            <li><Link to="/docs/test">Getting Started</Link></li>
+            <li as="a" target="_blank" href='http://localhost:8000/docs/test#set%20up%20auth%20provider'>Auth Provider</li>
+            <li><Link to="/docs/test">Callback page</Link></li>
+            <li><Link to="/docs/test">Enjoy</Link></li>
+
           </ul>
         </Box>
         <Box fontSize={["sm", "md", "lg", "xl"]} maxW="36rem" pl='2rem' pr='1rem'     width={{sm: 'full'}} display='block' className="content">{children}</Box>        
