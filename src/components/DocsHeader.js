@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import React from "react";
 
 const MenuItems = ({ children }) => (
-  <Text mt={{ base: 4, md: 0 }} mr={6} display="block" color='sec'>
+  <Text mt={{ base: 4, md: 0 }} mr={4} display="block" color='sec'>
     {children}
   </Text>
 );

@@ -1,10 +1,10 @@
 
-import { ColorModeProvider, CSSReset, theme, ThemeProvider } from "@chakra-ui/core";
+import { Box, ColorModeProvider, CSSReset, theme, ThemeProvider } from "@chakra-ui/core";
 import { Global } from '@emotion/core';
 import 'focus-visible/dist/focus-visible';
 import React from "react";
 import DocsHeader from "./Docsheader";
-import { GlobalStyles } from "./DocsLayoutStyles";
+import { DocsStyles } from "./DocsLayoutStyles";
 
 const Layout = ({ children }) => {
 
@@ -12,18 +12,18 @@ const Layout = ({ children }) => {
     <>
       <ThemeProvider theme={theme}>
       <CSSReset />
-      <Global styles={GlobalStyles} />
+      <Global styles={DocsStyles} />
       <ColorModeProvider>
       <DocsHeader />
-      <div className="container">
-      <div className="body">
-        <div className="sidebar">Sidebar</div>
-        <div className="content">{children}</div>        
-      </div>
-      <footer>
+      <Box className="container">
+      <Box className="body">
+        <Box display={{ sm: 'none', md: 'block' }} className="sidebar">Sidebar</Box>
+        <Box fontSize={["sm", "md", "lg", "xl"]} maxW="36rem" pl='2rem' pr='1rem'     width={{sm: 'full'}} display='block' className="content">{children}</Box>        
+      </Box>
+      <Box>
           <h3>docs footer</h3>
-        </footer>
-      </div>
+        </Box>
+      </Box>
       </ColorModeProvider>
       </ThemeProvider>
     </>
