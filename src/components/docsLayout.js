@@ -1,6 +1,7 @@
 
-import { Box, ColorModeProvider, CSSReset, theme, ThemeProvider } from "@chakra-ui/core";
+import { Box, ColorModeProvider, CSSReset, Heading, theme, ThemeProvider } from "@chakra-ui/core";
 import { Global } from '@emotion/core';
+import { MDXProvider } from "@mdx-js/react";
 import 'focus-visible/dist/focus-visible';
 import { Link } from "gatsby";
 import React from "react";
@@ -15,6 +16,12 @@ const Layout = ({ children }) => {
       <CSSReset />
       <Global styles={DocsStyles} />
       <ColorModeProvider>
+      <MDXProvider 
+        components={{
+          h1: props => <Heading as="h1" size="lg" {...props} />,
+          h2: props => <Heading as="h2" size="md" {...props} />
+        }}
+      >
       <DocsHeader />
       <Box className="container">
       <Box className="body">
@@ -33,6 +40,7 @@ const Layout = ({ children }) => {
           <h3>docs footer</h3>
         </Box>
       </Box>
+      </MDXProvider>
       </ColorModeProvider>
       </ThemeProvider>
     </>

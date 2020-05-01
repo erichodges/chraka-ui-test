@@ -56,11 +56,7 @@ export const DocsStyles = css`
 
     }
 
-    .content h1 {
-      font-size: 18px;
-      font-weight: bold; 
-      padding-bottom: 1rem;
-    }
+
 
     .sidenav {
       list-style-type: none;
