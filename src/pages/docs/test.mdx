@@ -1,11 +1,13 @@
 # Getting Started
 
-
 useAuth is designed to be quick to setup. You'll need an Auth0 account with an app domain and client id.
 
 
 ## 1 Install the hook
 
+```js
+$ yarn add react-use-auth
+```
 
 Downloads from npm, adds to your package.json, etc. You can use npmas well.
 
@@ -19,7 +21,24 @@ I recommend adding this around your root component. In Gatsby that's done in gat
 
 But of course server-side "you" will always be logged out.
 
-AuthProvider creates a context, sets up a state reducer, initializes an Auth0 client and so on. Everything you need for authentication to work in your whole app :)
+```jsx
+import React from "react"
+import { navigate } from "gatsby"
+
+import { AuthProvider } from "react-use-auth"
+
+export const wrapRootElement = ({ element }) => (
+    <AuthProvider
+      navigate={navigate}
+      auth0_domain="useauth.auth0.com"
+      auth0_client_id="GjWNFNOHqlino7lQNjBwEywalaYtbIzh"
+    >
+      {element}
+      </AuthProvider>
+)
+```
+
+```<AuthProvider>``` creates a context, sets up a state reducer, initializes an Auth0 client and so on. Everything you need for authentication to work in your whole app :)
 
 The API takes a couple config options:
 
