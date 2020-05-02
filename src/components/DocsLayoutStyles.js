@@ -17,7 +17,6 @@ export const DocsStyles = css`
         margin: 0;
     }
 
-
     .container {
     height: 90vh;
     width: 100vw;
@@ -53,13 +52,33 @@ export const DocsStyles = css`
 
     .content {
     overflow-y: scroll;
-
     }
-
-
 
     .sidenav {
       list-style-type: none;
     }
+
+    pre {
+      padding-top: .5rem;
+      padding-left: .5rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      overflow: auto;
+    }
+
+    @media (min-width: 360px) {
+      pre {
+        font-size: .75rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      pre {
+        font-size: 1rem;
+      }
+    }
+
+
+    
 `;
 

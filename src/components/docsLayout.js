@@ -16,12 +16,7 @@ const Layout = ({ children }) => {
       <CSSReset />
       <Global styles={DocsStyles} />
       <ColorModeProvider>
-      <MDXProvider 
-        components={{
-          h1: props => <Heading as="h1" size="lg" {...props} />,
-          h2: props => <Heading as="h2" size="md" {...props} />
-        }}
-      >
+
       <DocsHeader />
       <Box className="container">
       <Box className="body">
@@ -34,13 +29,23 @@ const Layout = ({ children }) => {
 
           </ul>
         </Box>
-        <Box fontSize={["sm", "md", "lg", "xl"]} maxW="36rem" pl='2rem' pr='1rem'     width={{sm: 'full'}} display='block' className="content">{children}</Box>        
+        <MDXProvider 
+        components={{
+          h1: props => <Heading as="h1" size="lg" mb="10px" mt="-3px" {...props} />,
+          h2: props => <Heading as="h2" size="md" mb="8px" {...props} />
+        }}
+      >
+        <Box fontSize={["sm", "md", "lg", "xl"]} maxW="40rem" pl='2rem' pr='1rem'     width={{sm: 'full'}} display='block' className="content" style={{overflow: 'auto'}}
+        >
+          {children}
+        </Box>
+        </MDXProvider>
       </Box>
       <Box>
           <h3>docs footer</h3>
         </Box>
       </Box>
-      </MDXProvider>
+      
       </ColorModeProvider>
       </ThemeProvider>
     </>
