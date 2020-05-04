@@ -1,5 +1,4 @@
 import { css } from '@emotion/core';
-// import styled from '@emotion/styled';
 
 export const DocsStyles = css`
   /*
@@ -46,6 +45,13 @@ export const DocsStyles = css`
     border-right: 1px solid lightgrey;
     }
 
+    @media (min-width: 360px) {
+      .sidebar {
+        display: none;
+      }
+    }
+  
+
     .footer {
         border-top: 1px solid lightgrey;
     }
@@ -57,6 +63,8 @@ export const DocsStyles = css`
     .sidenav {
       list-style-type: none;
     }
+
+
 
     pre {
       padding-top: .5rem;
@@ -77,8 +85,7 @@ export const DocsStyles = css`
         font-size: 1rem;
       }
     }
-
-
+    
     
 `;
 
