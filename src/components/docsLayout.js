@@ -5,8 +5,16 @@ import { MDXProvider } from "@mdx-js/react";
 import 'focus-visible/dist/focus-visible';
 import { Link } from "gatsby";
 import React from "react";
+// import CodeBlock from './CodeBlock';
 import DocsHeader from "./Docsheader";
 import { DocsStyles } from "./DocsLayoutStyles";
+
+const components = {
+  // pre: (props) => <div {...props} />,
+  // code: CodeBlock,
+  h1: props => <Heading as="h1" size="lg" mb="10px" mt="-3px" {...props} />,
+  h2: props => <Heading as="h2" size="md" mb="8px" {...props} />
+}
 
 const Layout = ({ children }) => {
 
@@ -30,11 +38,7 @@ const Layout = ({ children }) => {
           </ul>
         </Box>
         <MDXProvider 
-        components={{
-          h1: props => <Heading as="h1" size="lg" mb="10px" mt="-3px" {...props} />,
-          h2: props => <Heading as="h2" size="md" mb="8px" {...props} />,
-          
-        }}
+        components={components}
       >
         <Box fontSize={["sm", "md", "lg", "xl"]} maxW="40rem" pl='2rem' pr='1rem'     width={{sm: 'full'}} display='block' className="content" 
         >

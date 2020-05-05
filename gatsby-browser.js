@@ -1,6 +1,10 @@
 import { MDXProvider } from '@mdx-js/react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
+import dracula from 'prism-react-renderer/themes/vsDark';
 import React from 'react';
+
+// dark themes: vsDark, dracula, duotoneDark (default), nightOwl, oceanicNext
+
 /* eslint-disable */
 const component = {
   pre: props => {
@@ -9,6 +13,7 @@ const component = {
     return (
       <Highlight
         {...defaultProps}
+        theme={dracula}
         code={props.children.props.children}
         language={
           matches && matches.groups && matches.groups.lang
