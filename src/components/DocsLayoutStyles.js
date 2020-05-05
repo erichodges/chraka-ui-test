@@ -64,8 +64,6 @@ export const DocsStyles = css`
       list-style-type: none;
     }
 
-
-
     pre {
       padding-top: .5rem;
       padding-left: .5rem;
@@ -85,7 +83,30 @@ export const DocsStyles = css`
         font-size: 1rem;
       }
     }
-    
+
+    @media (min-width: 360px) {
+      code {
+        font-size: .9rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      code {
+        font-size: 1rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      code {
+        font-size: 1.1rem;
+      }
+    }
+
+
+
+
+
+
     
 `;
 
