@@ -27,29 +27,29 @@ const Layout = ({ children }) => {
 
       <DocsHeader />
       <Box className="container">
-      <Box className="body">
-        <Box ml={4} display={{ sm: 'none', md: 'block' }} className="sidebar">
-          <ul className='sidenav'>
-            <li><Link to="/docs/test">Getting Started</Link></li>
-            <li as="a" target="_blank" href='http://localhost:8000/docs/test#set%20up%20auth%20provider'>Auth Provider</li>
-            <li><Link to="/docs/test">Callback page</Link></li>
-            <li><Link to="/docs/test">Enjoy</Link></li>
+        <Box className="body">
+          <Box ml={4} display={{ sm: 'none', md: 'block' }} className="sidebar">
+            <ul className='sidenav'>
+              <li><Link to="/docs/test">Getting Started</Link></li>
+              <li as="a" target="_blank" href='http://localhost:8000/docs/test#set%20up%20auth%20provider'>Auth Provider</li>
+              <li><Link to="/docs/test">Callback page</Link></li>
+              <li><Link to="/docs/test">Enjoy</Link></li>
 
-          </ul>
-        </Box>
-        <MDXProvider 
-        components={components}
-      >
-        <Box fontSize={["sm", "md", "lg", "xl"]} maxW="40rem" pl='2rem' pr='1rem'     width={{sm: 'full'}} display='block' className="content" 
+            </ul>
+          </Box>
+          <MDXProvider 
+          components={components}
         >
-          {children}
+          <Box fontSize={["sm", "md", "lg", "xl"]} maxW="40rem" pl='2rem' pr='1rem'     width={{sm: 'full'}} display='block' className="content" 
+          >
+            {children}
+          </Box>
+          </MDXProvider>
         </Box>
-        </MDXProvider>
-      </Box>
-      <Box>
-          <h3>docs footer</h3>
+        {/* <Box>
+            <h3>docs footer</h3>
+          </Box> */}
         </Box>
-      </Box>
       
       </ColorModeProvider>
       </ThemeProvider>

@@ -21,7 +21,9 @@ export const DocsStyles = css`
     width: 100vw;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 30px;
+
+    /*  to add a footer, use 1fr 30px(for the footer) etc in grid-template-rows  */
+    grid-template-rows: 1fr;
     }
 
     .body {
@@ -41,8 +43,8 @@ export const DocsStyles = css`
         padding-bottom: 1.25rem;
     }
 
-    .sidebar {
-    border-right: 1px solid lightgrey;
+    .sidebar li {
+      margin-bottom: .5rem;
     }
 
     @media (min-width: 360px) {
@@ -74,31 +76,57 @@ export const DocsStyles = css`
 
     @media (min-width: 360px) {
       pre {
-        font-size: .75rem;
+        font-size: .8rem;
+      }
+    }
+
+    @media (min-width: 500px) {
+      pre {
+        font-size: .9rem;
+        color: #569CD6;
+        background-color: #0E0E0E;
+        padding: 4px;
+        border-radius: 3px;
       }
     }
 
     @media (min-width: 768px) {
       pre {
         font-size: 1rem;
+        color: #569CD6;
+        background-color: #0E0E0E;
+        padding: 4px;
+        border-radius: 3px;
       }
     }
 
     @media (min-width: 360px) {
       code {
         font-size: .9rem;
+        color: #569CD6;
+        background-color: #0E0E0E;
+        padding: 4px;
+        border-radius: 3px;
       }
     }
 
     @media (min-width: 768px) {
       code {
         font-size: 1rem;
+        color: #569CD6;
+        background-color: #0E0E0E;
+        padding: 4px;
+        border-radius: 3px;
       }
     }
 
     @media (min-width: 1024px) {
       code {
         font-size: 1.1rem;
+        color: #569CD6;
+        background-color: #0E0E0E;
+        padding: 4px;
+        border-radius: 3px;
       }
     }
 
