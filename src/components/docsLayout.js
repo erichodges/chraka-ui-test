@@ -5,7 +5,6 @@ import { MDXProvider } from "@mdx-js/react";
 import 'focus-visible/dist/focus-visible';
 import { Link } from "gatsby";
 import React from "react";
-// import CodeBlock from './CodeBlock';
 import DocsHeader from "./Docsheader";
 import { DocsStyles } from "./DocsLayoutStyles";
 
