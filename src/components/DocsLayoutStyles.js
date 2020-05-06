@@ -45,6 +45,12 @@ export const DocsStyles = css`
 
     .sidebar li {
       margin-bottom: .5rem;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+
+    .sidenav {
+      list-style-type: none;
     }
 
     @media (min-width: 360px) {
@@ -62,9 +68,7 @@ export const DocsStyles = css`
     overflow-y: scroll;
     }
 
-    .sidenav {
-      list-style-type: none;
-    }
+
 
     pre {
       padding-top: .5rem;
