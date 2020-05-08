@@ -8,6 +8,7 @@ import React from "react";
 import DocsHeader from "./Docsheader";
 import { DocsStyles } from "./DocsLayoutStyles";
 
+
 const components = {
   h1: props => <Heading as="h1" size="lg" mb="10px" mt="-3px" {...props} />,
   h2: props => <Heading as="h2" size="md" mb="8px" {...props} />
@@ -27,10 +28,10 @@ const Layout = ({ children }) => {
         <Box className="body">
           <Box ml={4} display={{ sm: 'none', md: 'block' }} className="sidebar">
             <ul className='sidenav'>
-              <li><Link to="/docs/test">Getting Started</Link></li>
-              <li as="a" target="_blank" href='http://localhost:8000/docs/test#set%20up%20auth%20provider'>Auth Provider</li>
-              <li><Link to="/docs/test">Callback page</Link></li>
-              <li><Link to="/docs/test">Enjoy</Link></li>
+              <li><Link to="./docs/test/#1-install-the-hook">Install hook</Link></li>
+              <li><Link to="./docs/test/#2-set-up-authprovider"></Link>Auth Provider</li>
+              <li><Link to="./docs/test/#3-create-the-callback-page">Callback page</Link></li>
+              <li><Link to="./docs/test/#4-enjoy-useauth">Enjoy</Link></li>
 
             </ul>
           </Box>

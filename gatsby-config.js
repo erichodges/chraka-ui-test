@@ -23,7 +23,15 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [`gatsby-remark-autolink-headers`],
+        plugins: [
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+              options: {
+                enableCustomId: true,
+                elements: [`h2`, `h3`],
+              },
+          },
+        ],
       },
     },
     `gatsby-plugin-chakra-ui`,
@@ -34,6 +42,15 @@ module.exports = {
         defaultLayouts: {
           default: require.resolve("./src/components/DocsLayout"),
         },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+              options: {
+                enableCustomId: true,
+                elements: [`h2`, `h3`],
+              },
+          },
+        ],
       },
     },
     `gatsby-transformer-sharp`,

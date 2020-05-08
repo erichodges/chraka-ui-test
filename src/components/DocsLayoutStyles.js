@@ -10,6 +10,16 @@ export const DocsStyles = css`
      box-shadow: none;
    }
 
+   html {
+    scroll-behavior: smooth;
+  }
+
+  @media screen and (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
     body {
         overflow: hidden;
         padding: 0;
@@ -47,6 +57,7 @@ export const DocsStyles = css`
       margin-bottom: .5rem;
       font-size: 1rem;
       font-weight: bold;
+      cursor: pointer;
     }
 
     .sidenav {
