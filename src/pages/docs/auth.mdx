@@ -1,18 +1,3 @@
-
-# Getting Started
-
-useAuth is designed to be quick to setup. You'll need an Auth0 account with an app domain and client id.
-
-
-## 1. Install the hook
-
-```
-$ yarn add react-use-auth
-```
-
-Downloads from npm, adds to your package.json, etc. You can use npmas well.
-
-
 ## 2. Set up AuthProvider
 
 
@@ -75,55 +60,3 @@ const params = {
 ```responseType``` same here. I copy paste this from old projects so I figured it's a good default.
 
 ```scope``` you need openid for social logins and to be able to fetch user profiles after authentication. Profile and Email too. You can add more via the ```auth0_params``` override.
-
-## 3. Create the callback page
-
-
-Auth0 and most other authentication providers use OAuth. That requires redirecting your user to their login form. After login, the provider redirects the user back to your app.
-
-Any way of creating React pages should work, here's what I use for Gatsby.
-
-The goal is to load a page, briefly show some text, and run the ```handleAuthentication``` method from useAuthon page load.
-
-That method will create a cookie in local storage with your user's information and redirect back to homepage. Redirecting to other post-login pages currently isn't supported but is a good idea now that I thought of it 🤔
-
-PS: Make sure you add ```domain/auth0_callback``` as a valid callback URL in your Auth0 config
-
-## 4. Enjoy useAuth
-
-
-You're ready to use useAuthfor authentication in your React app.
-
-Here's a login button for example:
-
-```jsx
-const Login = () => {
-    const { isAuthenticated, login, logout } = useAuth()
-
-    if (isAuthenticated()) {
-        return <Button onClick={logout}>Logout</Button>
-    } else {
-        return <Button onClick={login}>Login</Button>
-    }
-}
-```
-
-```isAuthenticated``` is a method that checks if the user's cookie is still valid. ```login``` and ```logout``` trigger their respective actions.
-
-You can even say hello to your users:
-
-```jsx
-// src/pages/index.js
-
-const IndexPage = () => {
-  const { isAuthenticated, user } = useAuth()
-
-  return (
-    <Layout>
-      <SEO title="Home" />
-      <h1>Hi {isAuthenticated() ? user.name : "people"}</h1>
-  )
-}
-```
-
-Check ```isAuthenticated``` then use the user object. Simple as that.

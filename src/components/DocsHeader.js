@@ -78,9 +78,7 @@ const DocsHeader = props => {
         alignItems="center"
         // flexGrow={1}
       >
-        <Link to="/docs/test">
-        <MenuItems>Docs</MenuItems>
-        </Link>
+              
         {/* <MenuItems>Examples</MenuItems> */}
         <MenuItems>GitHub</MenuItems>
         <Box

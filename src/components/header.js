@@ -54,7 +54,7 @@ const Header = props => {
             <DrawerHeader>Header</DrawerHeader>
   
             <DrawerBody>
-            <Link to="/docs/test">
+            <Link to="/docs/getting-started">
               Docs/Getting Started
             </Link>
             </DrawerBody>
@@ -79,7 +79,7 @@ const Header = props => {
         alignItems="center"
         // flexGrow={1}
       >
-        <Link to="/docs/test">
+        <Link to="/docs/getting-started">
         <MenuItems>Docs</MenuItems>
         </Link>
         {/* <MenuItems>Examples</MenuItems> */}
