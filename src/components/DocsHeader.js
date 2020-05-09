@@ -40,7 +40,7 @@ const DocsHeader = props => {
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
         </Box>
-        <Flex align="center" mr={5} ml={5}>
+        <Flex align="center" ml={1}>
           
           <Drawer
           isOpen={isOpen}
@@ -65,8 +65,8 @@ const DocsHeader = props => {
           </DrawerContent>
         </Drawer>
 
-          <Link to='/'><Heading as="h1" size="lg" color='pri'>
-            C-UI test
+          <Link to='/'><Heading as="h1" size="xl" color='pri' style={{letterSpacing: '-3px'}}>
+            useAuth
           </Heading>
           </Link>
         </Flex>

@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 import React from "react";
 
 const MenuItems = ({ children }) => (
-  <Text mt={{ base: 4, md: 0 }} mr={6} display="block" color='sec'>
+  <Text mt={{ base: 4, md: 0 }} mr={0} display="block" color='sec'>
     {children}
   </Text>
 );
@@ -23,7 +23,8 @@ const Header = props => {
       align="center"
       justify="space-between"
       wrap="wrap"
-      padding=".6rem"
+      padding="0"
+      margin=".6rem"
       bg={colorMode === "light"? "grey.600" : "grey.800"}
       color={colorMode === "light"? "black" : "#ccc"}
       {...props}
@@ -40,7 +41,7 @@ const Header = props => {
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
         </Box>
-        <Flex align="center" mr={5} ml={5}>
+        <Flex align="center" ml={1}>
           
           <Drawer
           isOpen={isOpen}
@@ -66,24 +67,27 @@ const Header = props => {
           </DrawerContent>
         </Drawer>
 
-          <Link to='/'><Heading as="h1" size="lg" color='pri'>
-            C-UI test
+          <Link to='/'><Heading as="h1" size="xl" color='pri' m={0} style={{letterSpacing: '-3px'}}>
+            useAuth
           </Heading>
           </Link>
         </Flex>
       </Flex>
 
       <Box
-        display={{ xs: "none", sm: "none", md: "fle"}}
+        display={{ xs: "none", sm: "none", md: "flex"}}
         width={{ sm: "full", md: "auto" }}
+        alignContent="center"
         alignItems="center"
         // flexGrow={1}
       >
+        <Box display="flex" alignContent="center" alignItems="center" mx={4} >
         <Link to="/docs/getting-started">
-        <MenuItems>Docs</MenuItems>
+        <MenuItems >Docs &nbsp; &nbsp; &nbsp;</MenuItems>
         </Link>
         {/* <MenuItems>Examples</MenuItems> */}
         <MenuItems>GitHub</MenuItems>
+        </Box>
         <Box
           display={{ xs: "none", sm: "none", md: "flex" }}
           mt={{ base: 4, md: 0 }}
