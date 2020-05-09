@@ -76,7 +76,8 @@ export const DocsStyles = css`
     }
 
     .content {
-    overflow-y: scroll;
+      margin-top: .4rem;
+      overflow-y: scroll;
     }
 
 
