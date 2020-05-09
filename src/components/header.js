@@ -30,7 +30,7 @@ const Header = props => {
       {...props}
     >
       <Flex  align="center" >
-        <Box mt={1} display={{ sm: "block", md: "none" }} ref={btnRef} onClick={onOpen} css={css`cursor: pointer; padding-bottom: 2px`}>
+        <Box mt={1} ml={1} mr={3} display={{ sm: "block", md: "none" }} ref={btnRef} onClick={onOpen} css={css`cursor: pointer; padding-bottom: 2px`}>
           <svg
             fill={colorMode === "light"? "black" : "white"}
             width="17px"
