@@ -81,9 +81,9 @@ const Header = props => {
         alignItems="center"
         // flexGrow={1}
       >
-        <Box display="flex" alignContent="center" alignItems="center" mx={4} >
+        <Box display="flex" alignContent="center" alignItems="center" mx={5}>
         <Link to="/docs/getting-started">
-        <MenuItems >Docs &nbsp; &nbsp; &nbsp;</MenuItems>
+        <MenuItems>Docs &nbsp; &nbsp; &nbsp;</MenuItems>
         </Link>
         {/* <MenuItems>Examples</MenuItems> */}
         <MenuItems>GitHub</MenuItems>
@@ -97,7 +97,6 @@ const Header = props => {
               colorMode === "light" ? "dark" : "light"
             } mode`}
             isRound="true"
-            border-top-color="green !important"
             variant="ghost"
             color="current"
             ml="2"

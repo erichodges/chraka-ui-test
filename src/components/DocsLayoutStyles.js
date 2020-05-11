@@ -23,7 +23,6 @@ export const DocsStyles = css`
     body {
         overflow: hidden;
         padding: 0;
-        margin: 0;
     }
 
     .container {
@@ -53,12 +52,15 @@ export const DocsStyles = css`
         padding-bottom: 1.25rem;
     }
 
+
+
     .sidebar li {
       margin-bottom: .5rem;
       font-size: 1rem;
       font-weight: bold;
       cursor: pointer;
     }
+
 
     .sidenav {
       list-style-type: none;
