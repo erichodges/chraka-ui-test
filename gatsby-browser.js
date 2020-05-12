@@ -1,7 +1,9 @@
 import { MDXProvider } from '@mdx-js/react';
+import { navigate } from "gatsby";
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import dracula from 'prism-react-renderer/themes/vsDark';
+import vsDark from 'prism-react-renderer/themes/vsDark';
 import React from 'react';
+import { AuthProvider } from "react-use-auth";
 
 // dark themes: vsDark, dracula, duotoneDark (default), nightOwl, oceanicNext
 
@@ -13,7 +15,7 @@ const component = {
     return (
       <Highlight
         {...defaultProps}
-        theme={dracula}
+        theme={vsDark}
         code={props.children.props.children}
         language={
           matches && matches.groups && matches.groups.lang
@@ -37,5 +39,13 @@ const component = {
   },
 };
 export const wrapRootElement = ({ element }) => {
-  return <MDXProvider components={component}>{element}</MDXProvider>;
+  return <AuthProvider
+    navigate={navigate}
+    auth0_domain="dev-i61q270i.auth0.com"
+    auth0_client_id="Gj8QSVdFBAQl3mFMapU5nH48qoybCygK"
+    >
+  <MDXProvider components={component}>
+    {element}
+  </MDXProvider>
+  </AuthProvider>;
 };

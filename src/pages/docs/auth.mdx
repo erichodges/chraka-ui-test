@@ -3,7 +3,7 @@
 
 useAuth uses an AuthProvider component to configure the Auth0 client and share state between components. It's using React context with a reducer behind the scenes, but that's an implementation detail.
 
-I recommend adding this around your root component. In Gatsby that's done in gatsby-browser.jsand gatsby-ssr.js. Yes useAuthis built so it doesn't break server-side rendering. ✌️
+I recommend adding this around your root component. In Gatsby that's done in gatsby-browser.js and gatsby-ssr.js. Yes useAuth is built so it doesn't break server-side rendering. ✌️
 
 But of course server-side "you" will always be logged out.
 
@@ -37,6 +37,8 @@ The API takes a couple config options:
 ```auth0_params``` – an object that lets you overwrite any of the default Auth0 client parameters
 
 PS: even though Auth doesn't do anything server-side, useAuth will throw errors during build, if its context doesn't exist
+
+### Default Auth0 params
 
 By default ```useAuth```'s Auth0 client uses these params:
 
