@@ -13,7 +13,6 @@ const components = {
   h2: props => <Heading as="h2" size="md" mb="1rem" {...props} />,
   h3: props => <Heading as="h3" size="md" mb="1rem" {...props} />
 }
-
 const Layout = ({ children }) => {
 
   return (

@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 
 const IndexPage = (props) => {
 
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
 
 return (
   <Layout>
