@@ -18,8 +18,6 @@ const GlobalStyles = css`
 `;
 
 
-
-
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

@@ -38,14 +38,14 @@ const component = {
     );
   },
 };
-export const wrapRootElement = ({ element }) => {
-  return <AuthProvider
+export const wrapRootElement = ({ element }) => (
+  <AuthProvider
     navigate={navigate}
     auth0_domain="dev-i61q270i.auth0.com"
     auth0_client_id="Gj8QSVdFBAQl3mFMapU5nH48qoybCygK"
     >
-  <MDXProvider components={component}>
+    <MDXProvider components={component}>
     {element}
-  </MDXProvider>
-  </AuthProvider>;
-};
+    </MDXProvider>
+  </AuthProvider>
+  )

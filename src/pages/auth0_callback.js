@@ -18,7 +18,6 @@ return (
     <Box  h="94vh" w="100vw" display="flex" alignItems="center" justifyContent="center">
       <Heading as="h2">Login Success</Heading>        
     </Box>
-    <Heading as="h3" size="xl">Hi people</Heading>
   </Layout>
 )
 }

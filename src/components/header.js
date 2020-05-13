@@ -1,14 +1,33 @@
 /** @jsx jsx */
-import { Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, Heading, IconButton, Text, useColorMode, useDisclosure } from "@chakra-ui/core";
+import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, Heading, IconButton, Text, useColorMode, useDisclosure } from "@chakra-ui/core";
 import { css, jsx } from '@emotion/core';
 import { Link } from "gatsby";
 import React from "react";
+import { useAuth } from "react-use-auth";
 
 const MenuItems = ({ children }) => (
   <Text mt={{ base: 4, md: 0 }} mr={0} display="block" color='sec'>
     {children}
   </Text>
 );
+
+const Login = () => {
+  const { isAuthenticated, login, logout, isAuthenticating } = useAuth();
+
+  if (isAuthenticated()) {
+    return (
+      <>
+        <Button onClick={logout}>Logout</Button>
+      </>
+    )
+  } else {
+    return (
+      <>
+        <Button onClick={login} >Login</Button>
+      </>
+    )
+  }
+}
 
 const Header = props => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -86,7 +105,9 @@ const Header = props => {
         <MenuItems>Docs &nbsp; &nbsp; &nbsp;</MenuItems>
         </Link>
         {/* <MenuItems>Examples</MenuItems> */}
-        <MenuItems>GitHub</MenuItems>
+        
+        <MenuItems>GitHub &nbsp; &nbsp; &nbsp;</MenuItems>
+        <Login />
         </Box>
         <Box
           display={{ xs: "none", sm: "none", md: "flex" }}
