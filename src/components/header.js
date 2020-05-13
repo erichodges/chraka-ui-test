@@ -5,14 +5,8 @@ import { Link } from "gatsby";
 import React from "react";
 import { useAuth } from "react-use-auth";
 
-const MenuItems = ({ children }) => (
-  <Text mt={{ base: 4, md: 0 }} mr={0} display="block" color='sec'>
-    {children}
-  </Text>
-);
-
 const Login = () => {
-  const { isAuthenticated, login, logout, isAuthenticating } = useAuth();
+  const { isAuthenticated, login, logout } = useAuth();
 
   if (isAuthenticated()) {
     return (
@@ -28,6 +22,12 @@ const Login = () => {
     )
   }
 }
+
+const MenuItems = ({ children }) => (
+  <Text mt={{ base: 4, md: 0 }} mr={0} display="block" color='sec'>
+    {children}
+  </Text>
+);
 
 const Header = props => {
   const { colorMode, toggleColorMode } = useColorMode();

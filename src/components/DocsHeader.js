@@ -1,8 +1,28 @@
 /** @jsx jsx */
-import { Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, Heading, IconButton, Text, useColorMode, useDisclosure } from "@chakra-ui/core";
+import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, Heading, IconButton, Text, useColorMode, useDisclosure } from "@chakra-ui/core";
 import { css, jsx } from '@emotion/core';
 import { Link } from "gatsby";
 import React from "react";
+import { useAuth } from "react-use-auth";
+
+const Login = () => {
+  const { isAuthenticated, login, logout } = useAuth();
+
+  if (isAuthenticated()) {
+    return (
+      <>
+        <Button onClick={logout}>Logout</Button>
+      </>
+    )
+  } else {
+    return (
+      <>
+        <Button onClick={login} >Login</Button>
+      </>
+    )
+  }
+}
+
 
 const MenuItems = ({ children }) => (
   <Text mt={{ base: 4, md: 0 }} mr={4} display="block" color='sec'>
@@ -81,6 +101,7 @@ const DocsHeader = props => {
               
         {/* <MenuItems>Examples</MenuItems> */}
         <MenuItems>GitHub</MenuItems>
+        <Login />
         <Box
           display={{ xs: "none", sm: "none", md: "flex" }}
           mt={{ base: 4, md: 0 }}
