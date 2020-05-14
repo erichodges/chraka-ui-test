@@ -100,7 +100,7 @@ const DocsHeader = props => {
       >
               
         {/* <MenuItems>Examples</MenuItems> */}
-        <MenuItems>GitHub &nbsp;</MenuItems>
+        <MenuItems><a href="https://github.com/Swizec/useAuth">GitHub &nbsp;</a></MenuItems>
         <Login />
         <Box
           display={{ xs: "none", sm: "none", md: "flex" }}

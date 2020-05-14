@@ -106,7 +106,7 @@ const Header = props => {
         </Link>
         
         {/* <MenuItems>Examples</MenuItems> */}
-        <MenuItems>GitHub &nbsp;</MenuItems>
+        <MenuItems><a href="https://github.com/Swizec/useAuth">GitHub &nbsp;</a></MenuItems>
         <Login />
         </Box>
         <Box
