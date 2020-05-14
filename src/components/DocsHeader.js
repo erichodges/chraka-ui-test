@@ -93,14 +93,14 @@ const DocsHeader = props => {
       </Flex>
 
       <Box
-        display={{ xs: "none", sm: "none", md: "fle"}}
+        display={{ xs: "none", sm: "none", md: "flex"}}
         width={{ sm: "full", md: "auto" }}
         alignItems="center"
         // flexGrow={1}
       >
               
         {/* <MenuItems>Examples</MenuItems> */}
-        <MenuItems>GitHub</MenuItems>
+        <MenuItems>GitHub &nbsp;</MenuItems>
         <Login />
         <Box
           display={{ xs: "none", sm: "none", md: "flex" }}
@@ -114,7 +114,7 @@ const DocsHeader = props => {
             border-top-color="green !important"
             variant="ghost"
             color="current"
-            ml="2"
+            ml='1.735rem'
             fontSize="20px"
             onClick={toggleColorMode}
             icon={colorMode === "light" ? "sun" : "moon"}

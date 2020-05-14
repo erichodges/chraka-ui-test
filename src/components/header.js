@@ -17,14 +17,14 @@ const Login = () => {
   } else {
     return (
       <>
-        <Button onClick={login} >Login</Button>
+        <Button onClick={login}>Login</Button>
       </>
     )
   }
 }
 
 const MenuItems = ({ children }) => (
-  <Text mt={{ base: 4, md: 0 }} mr={0} display="block" color='sec'>
+  <Text mt={{ base: 4, md: 0 }} mr={4} display="block" color='sec'>
     {children}
   </Text>
 );
@@ -102,11 +102,11 @@ const Header = props => {
       >
         <Box display="flex" alignContent="center" alignItems="center" mx={5}>
         <Link to="/docs/getting-started">
-        <MenuItems>Docs &nbsp; &nbsp; &nbsp;</MenuItems>
+        <MenuItems>Docs &nbsp;</MenuItems>
         </Link>
-        {/* <MenuItems>Examples</MenuItems> */}
         
-        <MenuItems>GitHub &nbsp; &nbsp; &nbsp;</MenuItems>
+        {/* <MenuItems>Examples</MenuItems> */}
+        <MenuItems>GitHub &nbsp;</MenuItems>
         <Login />
         </Box>
         <Box
