@@ -32,16 +32,16 @@ const Layout = ({ children }) => {
   return (
     <>
       <ThemeProvider theme={theme}>
-      <CSSReset />
-      <Global styles={GlobalStyles} />
-      <ColorModeProvider>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div>
-        <main>{children}</main>
-        <footer>
-        </footer>
-      </div>
-      </ColorModeProvider>
+        <CSSReset />
+        <Global styles={GlobalStyles} />
+        <ColorModeProvider>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <div>
+            <main>{children}</main>
+            <footer>
+            </footer>
+          </div>
+        </ColorModeProvider>
       </ThemeProvider>
     </>
   )
