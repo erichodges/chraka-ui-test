@@ -25,9 +25,9 @@ return (
           fontSize="36px"            
           icon="lock"
         />
-        <Heading as="h1" size="2xl" color='pri' style={{letterSpacing: '-3px'}}>useAuth</Heading>
+        <Heading as="h1" size="2xl" color={colorMode === "light"? "black" : "#ccc"} style={{letterSpacing: '-3px'}}>useAuth</Heading>
         </Box>
-        <Heading as="h2" size="lg" mb={2} >Authentication for React Apps</Heading>
+        <Heading as="h2" size="lg" mb={2} color={colorMode === "light"? "black" : "#ccc"}>Authentication for React Apps</Heading>
         <code>yarn add react-use-auth</code>
       </Box>
     </Box>
