@@ -40,7 +40,7 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
-          default: require.resolve("./src/components/DocsLayout.js"),
+          default: require.resolve("./src/components/docsLayout.js"),
         },
         gatsbyRemarkPlugins: [
           {
