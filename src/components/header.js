@@ -30,9 +30,7 @@ const MenuItems = ({ children }) => (
 );
 
 const Header = props => {
-  const { colorMode, toggleColorMode } = useColorMode();
-  // const [show, setShow] = React.useState(false);
-  // const handleToggle = () => setShow(!show);
+  const { colorMode, toggleColorMode } = useColorMode('light');
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
