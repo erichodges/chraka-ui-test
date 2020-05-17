@@ -23,17 +23,18 @@ const Login = () => {
   }
 }
 
-const MenuItems = ({ children }) => (
-  <Text mt={{ base: 4, md: 0 }} mr={4} display="block" color={colorMode === "light"? "black" : "#ccc"}>
-    {children}
-  </Text>
-);
+// const MenuItems = ({ children }) => (
+//   <Text mt={{ base: 4, md: 0 }} mr={4} display="block">
+//     {children}
+//   </Text>
+// );
 
 const Header = props => {
   const { colorMode, toggleColorMode } = useColorMode('light');
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
+  
   return (
     <Flex
       as="nav"
@@ -84,7 +85,7 @@ const Header = props => {
           </DrawerContent>
         </Drawer>
 
-          <Link to='/'><Heading as="h1" size="xl" color='pri' m={0} style={{letterSpacing: '-3px'}} color={colorMode === "light"? "black" : "#ccc"}>
+          <Link to='/'><Heading as="h1" size="xl" m={0} style={{letterSpacing: '-3px'}}>
             useAuth
           </Heading>
           </Link>
@@ -100,11 +101,11 @@ const Header = props => {
       >
         <Box display="flex" alignContent="center" alignItems="center" mx={5}>
         <Link to="/docs/getting-started">
-        <MenuItems>Docs &nbsp;</MenuItems>
+        <Box><Text mt={{ base: 4, md: 0 }} mr={4} display="block">Docs &nbsp;</Text></Box>
         </Link>
         
         {/* <MenuItems>Examples</MenuItems> */}
-        <MenuItems><a href="https://github.com/Swizec/useAuth">GitHub &nbsp;</a></MenuItems>
+        <Box><Text mt={{ base: 4, md: 0 }} mr={4} display="block"><a href="https://github.com/Swizec/useAuth">GitHub &nbsp;</a></Text></Box>
         <Login />
         </Box>
         <Box
