@@ -2,8 +2,8 @@
 export default {
     breakpoints: ["360px", "768px", "1024px", "1440px"],
     fonts: {
-      heading: '"system-ui", sans-serif',
-      body: "system-ui, sans-serif",
+      heading: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+      body: 'apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
       mono: "Menlo, monospace",
     },
     fontSizes: {
@@ -19,12 +19,12 @@ export default {
       "6xl": "4rem",
     },
     colors: {
-      pri: '#fff',
+      pri: '#ccc',
       sec: '#fafafa',
       menu: '#fcfcfc',
       clear: "transparent",
       black: "#000",
-      white: "#fafafa",
+      white: "#ccc",
       whiteAlpha: {
         900: "#fafafa"
       },

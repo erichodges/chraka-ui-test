@@ -9,8 +9,8 @@ import DocsHeader from "./DocsHeader";
 import { DocsStyles } from "./DocsLayoutStyles";
 
 const components = {
-  h1: props => <Heading as="h1" size="lg" mb="1.2rem" mt="-3px" {...props} />,
-  h2: props => <Heading as="h2" size="md" mb="1rem" {...props} />,
+  h1: props => <Heading as="h1" size="xl" mb="1.2rem" mt="-3px" {...props} />,
+  h2: props => <Heading as="h2" size="lg" mb="1rem" {...props} />,
   h3: props => <Heading as="h3" size="md" mb="1rem" {...props} />
 }
 const Layout = ({ children }) => {
