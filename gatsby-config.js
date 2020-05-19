@@ -20,21 +20,8 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
     },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-autolink-headers`,
-              options: {
-                enableCustomId: true,
-                elements: [`h2`, `h3`],
-              },
-          },
-        ],
-      },
-    },
     `gatsby-plugin-chakra-ui`,
+    `gatsby-transformer-remark`,
     {
     resolve: `gatsby-plugin-mdx`,
       options: {
