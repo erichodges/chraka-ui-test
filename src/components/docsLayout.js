@@ -36,8 +36,8 @@ const Layout = ({ children }) => {
             </ul>
           </Box>
           <MDXProvider 
-          components={components}
-        >
+            components={components}
+          >
           <Box fontSize={["sm", "md", "lg", "xl"]} maxW="40rem" pl='2rem' pr='1rem'     width={{sm: 'full'}} display='block' className="content" 
           >
             {children}

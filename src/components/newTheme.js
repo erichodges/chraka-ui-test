@@ -20,7 +20,7 @@ export default {
     },
     mode: {
       light: {
-        pri: '#ccc',
+        pri: '#000',
         sec: '#fafafa',
         menu: '#fcfcfc',
         black: "#000",

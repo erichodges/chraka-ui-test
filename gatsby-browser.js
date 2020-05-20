@@ -4,6 +4,7 @@ import Highlight, { defaultProps } from 'prism-react-renderer';
 import vsDark from 'prism-react-renderer/themes/vsDark';
 import React from 'react';
 import { AuthProvider } from "react-use-auth";
+// import { ThemeProvider, ColorModeProvider, CSSReset } from "@chakra-ui/core"
 
 // dark themes: vsDark, dracula, duotoneDark (default), nightOwl, oceanicNext
 
