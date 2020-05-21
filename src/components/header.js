@@ -7,17 +7,18 @@ import { useAuth } from "react-use-auth";
 
 const Login = () => {
   const { isAuthenticated, login, logout } = useAuth();
+  const { colorMode} = useColorMode();
 
   if (isAuthenticated()) {
     return (
       <>
-        <Button onClick={logout}>Logout</Button>
+        <Button onClick={logout} color={colorMode === "light"? "black" : "#ccc"}>Logout</Button>
       </>
     )
   } else {
     return (
       <>
-        <Button onClick={login}>Login</Button>
+        <Button onClick={login} color={colorMode === "light"? "black" : "#ccc"}>Login</Button>
       </>
     )
   }
@@ -80,7 +81,7 @@ const Header = props => {
           </DrawerContent>
         </Drawer>
 
-          <Link to='/'><Heading as="h1" fontSize={40} m={0} style={{letterSpacing: '-3px'}}>
+          <Link to='/'><Heading as="h1" color={colorMode === "light"? "black" : "#ccc"} fontSize={40} m={0} style={{letterSpacing: '-3px'}}>
             useAuth
           </Heading>
           </Link>
