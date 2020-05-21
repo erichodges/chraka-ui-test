@@ -1,12 +1,12 @@
 
-import { Box, ColorModeProvider, CSSReset, Heading, theme, ThemeProvider } from "@chakra-ui/core";
+import { Box, Heading } from "@chakra-ui/core";
 import { Global } from '@emotion/core';
 import { MDXProvider } from "@mdx-js/react";
 import 'focus-visible/dist/focus-visible';
 import { Link } from "gatsby";
 import React from "react";
-import DocsHeader from "./DocsHeader";
 import { DocsStyles } from "./DocsLayoutStyles";
+import Header from "./header";
 
 const components = {
   h1: props => <Heading as="h1" size="xl" mb="1.2rem" mt="-3px" {...props} />,
@@ -17,12 +17,8 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
-      <CSSReset />
       <Global styles={DocsStyles} />
-      <ColorModeProvider>
-
-      <DocsHeader />
+      <Header />
       <Box className="container">
         <Box className="body">
           <Box ml={4} display={{ sm: 'none', md: 'block' }} className="sidebar">
@@ -32,14 +28,10 @@ const Layout = ({ children }) => {
               <li><Link to="./docs/auth/">Auth Provider</Link></li>
               <li><Link to="./docs/callback">Callback page</Link></li>
               <li><Link to="./docs/enjoy">Enjoy</Link></li>
-
             </ul>
           </Box>
-          <MDXProvider 
-            components={components}
-          >
-          <Box fontSize={["sm", "md", "lg", "xl"]} maxW="40rem" pl='2rem' pr='1rem'     width={{sm: 'full'}} display='block' className="content" 
-          >
+          <MDXProvider components={components}>
+          <Box fontSize={["sm", "md", "lg", "xl"]} maxW="40rem" pl='2rem' pr='1rem'     width={{sm: 'full'}} display='block' className="content">
             {children}
           </Box>
           </MDXProvider>
@@ -47,10 +39,7 @@ const Layout = ({ children }) => {
         {/* <Box>
             <h3>docs footer</h3>
           </Box> */}
-        </Box>
-      
-      </ColorModeProvider>
-      </ThemeProvider>
+        </Box>      
     </>
   )
 }

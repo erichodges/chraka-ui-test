@@ -7,7 +7,7 @@ import { useAuth } from "react-use-auth";
 
 const Login = () => {
   const { isAuthenticated, login, logout } = useAuth();
-  const { colorMode} = useColorMode();
+  const { colorMode } = useColorMode();
 
   if (isAuthenticated()) {
     return (
@@ -95,9 +95,9 @@ const Header = props => {
         alignItems="center"
         // flexGrow={1}
       >
-        <Box display="flex" alignContent="center" alignItems="center" mx={5}>
+        <Box display="flex" color={colorMode === "light"? "black" : "#ccc"} alignContent="center" alignItems="center" mx={5}>
         <Link to="/docs/getting-started">
-        <Box><Text mt={{ base: 4, md: 0 }} mr={4} display="block">Docs &nbsp;</Text></Box>
+        <Box><Text  mt={{ base: 4, md: 0 }} mr={4} display="block">Docs &nbsp;</Text></Box>
         </Link>
         
         {/* <MenuItems>Examples</MenuItems> */}

@@ -1,13 +1,24 @@
+import { ColorModeProvider, CSSReset, theme, ThemeProvider } from "@chakra-ui/core";
+import { css, Global } from '@emotion/core';
 import { MDXProvider } from '@mdx-js/react';
 import { navigate } from "gatsby";
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import vsDark from 'prism-react-renderer/themes/vsDark';
 import React from 'react';
 import { AuthProvider } from "react-use-auth";
-// import { ThemeProvider, ColorModeProvider, CSSReset } from "@chakra-ui/core"
+
+const GlobalStyles = css`
+  /*
+    This will hide the focus indicator if the element receives focus    via the mouse,
+    but it will still show up on keyboard focus.
+  */
+  .js-focus-visible :focus:not([data-focus-visible-added]) {
+     outline: none;
+     box-shadow: none;
+   }
+`;
 
 // dark themes: vsDark, dracula, duotoneDark (default), nightOwl, oceanicNext
-
 /* eslint-disable */
 const component = {
   pre: props => {
@@ -45,8 +56,14 @@ export const wrapRootElement = ({ element }) => (
     auth0_domain="dev-i61q270i.auth0.com"
     auth0_client_id="Gj8QSVdFBAQl3mFMapU5nH48qoybCygK"
     >
+    <ThemeProvider theme={theme}>
+    <CSSReset />
+    <Global style={GlobalStyles} />
+    <ColorModeProvider>
     <MDXProvider components={component}>
-    {element}
+      {element}
     </MDXProvider>
+    </ColorModeProvider>
+    </ThemeProvider>
   </AuthProvider>
   )
