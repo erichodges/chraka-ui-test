@@ -23,10 +23,10 @@ const IndexPage = (props) => {
             fontSize="36px"            
             icon="lock"
           />
-          <Heading as="h1" fontSize={50} fontWeight='bold !important' style={{letterSpacing: '-3px'}}>useAuth</Heading>
+          <Heading as="h1" color={colorMode === "light"? "#000" : "#ccc"} fontSize={50} fontWeight='bold !important' style={{letterSpacing: '-3px'}}>useAuth</Heading>
           </Box>
-          <Heading as="h2" size="lg" mb={2}>Authentication for React Apps</Heading>
-          <code>yarn add react-use-auth</code>
+          <Heading as="h2" color={colorMode === "light"? "#000" : "#ccc"} size="lg" mb={2}>Authentication for React Apps</Heading>
+          <code variantColor="red">yarn add react-use-auth</code>
         </Box>
       </Box>
 
