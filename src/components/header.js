@@ -81,7 +81,7 @@ const Header = props => {
           </DrawerContent>
         </Drawer>
 
-          <Link to='/'><Heading as="h1" color={colorMode === "light"? "black" : "#ccc"} fontSize={40} m={0} style={{letterSpacing: '-3px'}}>
+          <Link to='/'><Heading as="h1" color={colorMode === "dark"? "#ccc" : "#000"} fontSize={40} m={0} style={{letterSpacing: '-3px'}}>
             useAuth
           </Heading>
           </Link>
