@@ -26,7 +26,7 @@ const Login = () => {
 
 
 const Header = props => {
-  const { colorMode, toggleColorMode } = useColorMode('light');
+  const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
