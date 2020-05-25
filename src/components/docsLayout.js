@@ -9,8 +9,8 @@ import { DocsStyles } from "./DocsLayoutStyles";
 import Header from "./header";
 
 const components = {
-  h1: props => <Heading as="h1" size="xl" mb="1.2rem" mt="-3px" {...props} />,
-  h2: props => <Heading as="h2" size="lg" mb="1rem" {...props} />,
+  h1: props => <Heading as="h1" size="xl" fontWeight="700" mb="1.2rem" mt="-3px" {...props} />,
+  h2: props => <Heading as="h2" size="lg" fontWeight="900" mb="1rem" {...props} />,
   h3: props => <Heading as="h3" size="md" mb="1rem" {...props} />
 }
 const Layout = ({ children }) => {
@@ -31,7 +31,7 @@ const Layout = ({ children }) => {
             </ul>
           </Box>
           <MDXProvider components={components}>
-          <Box fontSize={["sm", "md", "lg", "xl"]} maxW="40rem" pl='2rem' pr='1rem'     width={{sm: 'full'}} display='block' className="content">
+          <Box fontSize={["sm", "md", "lg", "xl"]} maxW="40rem" pl='2rem' pr='1rem' width={{sm: 'full'}} display='block' className="content">
             {children}
           </Box>
           </MDXProvider>

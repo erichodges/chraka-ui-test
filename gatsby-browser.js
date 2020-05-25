@@ -50,7 +50,13 @@ const component = {
     );
   },
 };
-export const wrapRootElement = ({ element }) => (
+export const wrapRootElement = ({ element }) => {
+ 
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('darkMode', 'false');
+  }
+
+return (
   <AuthProvider
     navigate={navigate}
     auth0_domain="dev-i61q270i.auth0.com"
@@ -67,3 +73,4 @@ export const wrapRootElement = ({ element }) => (
     </ThemeProvider>
   </AuthProvider>
   )
+}
