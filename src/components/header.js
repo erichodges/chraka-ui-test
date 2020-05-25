@@ -24,14 +24,18 @@ const Login = () => {
   }
 }
 
-
 const Header = props => {
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-
   
+  const iconButtonStyle = {
+    outline: 'none',
+    boxShadow: 'none'
+  }
+
   return (
+    
     <Flex
       as="nav"
       align="center"
@@ -108,18 +112,21 @@ const Header = props => {
           display={{ xs: "none", sm: "none", md: "flex" }}
           mt={{ base: 4, md: 0 }}
         >
+          
           <IconButton
-            aria-label={`Switch to ${
-              colorMode === "light" ? "dark" : "light"
-            } mode`}
+            style={iconButtonStyle}
+            icon={colorMode === "light" ? "sun" : "moon"}
+            onClick={toggleColorMode}
             isRound="true"
             variant="ghost"
             color="current"
             ml="2"
             fontSize="20px"
-            onClick={toggleColorMode}
-            icon={colorMode === "light" ? "sun" : "moon"}
-          />
+            aria-label={`Switch to ${
+              colorMode === "light" ? "dark" : "light"
+              } mode`
+            }            
+          />          
          </Box>
       </Box>
 

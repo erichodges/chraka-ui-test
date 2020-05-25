@@ -1,10 +1,10 @@
+/** @jsx jsx */
 import { ColorModeProvider, CSSReset, theme, ThemeProvider } from "@chakra-ui/core";
-import { css, Global } from '@emotion/core';
+import { css, Global, jsx } from '@emotion/core';
 import { MDXProvider } from '@mdx-js/react';
 import { navigate } from "gatsby";
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import vsDark from 'prism-react-renderer/themes/vsDark';
-import React from 'react';
 import { AuthProvider } from "react-use-auth";
 
 const GlobalStyles = css`
