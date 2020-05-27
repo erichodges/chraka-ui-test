@@ -59,8 +59,8 @@ const Header = props => {
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
         </Box>
-        <Flex align="center" ml={1}>
-          
+        {/* ====== Drawer Section ====== */}
+        <Flex align="center" ml={1}>         
           <Drawer
           isOpen={isOpen}
           placement="left"
@@ -84,10 +84,9 @@ const Header = props => {
             </DrawerFooter>
           </DrawerContent>
         </Drawer>
-
-        {/* color={colorMode === "light"? "#000" : "#ccc"} */}
-
-          <Link to='/'><Heading as="h1" color={`mode.${colorMode}.menu`} fontSize={40} m={0} style={{letterSpacing: '-3px'}}>
+        {/* ====== End Drawer Section ====== */}
+        
+          <Link to='/'><Heading as="h1" color={colorMode === "light"? "#000" : "#ccc"} fontSize={40} m={0} style={{letterSpacing: '-3px'}}>
             useAuth
           </Heading>
           </Link>

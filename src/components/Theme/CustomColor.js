@@ -12,11 +12,12 @@ const CustomColors = {
           background: "#ccc",
           text: "#334E68",
           heading: "#102a43",
+          lock: "00961A",
           icon: "#9FB3C8",
           link: "#9F00FF",
           },
       dark: {
-          pri: '#aaa',
+          pri: '#ccc',
           sec: '#fafafa',
           menu: '#fcfcfc',
           black: "#000",
