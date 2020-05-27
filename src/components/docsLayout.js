@@ -2,7 +2,6 @@
 import { Box, Heading } from "@chakra-ui/core";
 import { Global } from '@emotion/core';
 import { MDXProvider } from "@mdx-js/react";
-import 'focus-visible/dist/focus-visible';
 import { Link } from "gatsby";
 import React from "react";
 import { DocsStyles } from "./DocsLayoutStyles";

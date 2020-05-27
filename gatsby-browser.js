@@ -1,11 +1,13 @@
 /** @jsx jsx */
-import { ColorModeProvider, CSSReset, theme, ThemeProvider } from "@chakra-ui/core";
+import { ColorModeProvider, CSSReset, ThemeProvider } from "@chakra-ui/core";
 import { css, Global, jsx } from '@emotion/core';
 import { MDXProvider } from '@mdx-js/react';
+import 'focus-visible/dist/focus-visible';
 import { navigate } from "gatsby";
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import vsDark from 'prism-react-renderer/themes/vsDark';
 import { AuthProvider } from "react-use-auth";
+import CustomTheme from "./src/components/Theme/CustomTheme";
 
 const GlobalStyles = css`
   /*
@@ -62,7 +64,7 @@ return (
     auth0_domain="dev-i61q270i.auth0.com"
     auth0_client_id="Gj8QSVdFBAQl3mFMapU5nH48qoybCygK"
     >
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={CustomTheme}>
     <CSSReset />
     <Global style={GlobalStyles} />
     <ColorModeProvider>
