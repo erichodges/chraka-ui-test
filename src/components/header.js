@@ -41,9 +41,9 @@ const Header = props => {
       align="center"
       justify="space-between"
       wrap="wrap"
-      padding="0"
-      margin=".6rem"
-      bg={colorMode === "light"? "grey.600" : "grey.800"}
+      margin="0"
+      padding=".6rem"
+      bg={colorMode === "light"? "gray.50" : "gray.900"}
       color={colorMode === "light"? "black" : "#ccc"}
       {...props}
     >
@@ -116,7 +116,7 @@ const Header = props => {
           
           <IconButton
             style={iconButtonStyle}
-            icon={colorMode === "light" ? "sun" : "moon"}
+            icon={colorMode === "light" ? "moon" : "sun"}
             onClick={toggleColorMode}
             isRound="true"
             variant="ghost"
