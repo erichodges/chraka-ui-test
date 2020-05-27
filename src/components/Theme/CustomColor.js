@@ -25,6 +25,7 @@ const CustomColors = {
           background: "#102a43",
           text: "#EFF2FB",
           heading: "#ccc",
+          lock: "00961A",
           icon: "#486581",
           link: "#F8CCFF",
         },
