@@ -26,7 +26,7 @@ const IndexPage = (props) => {
           <Heading as="h1" color={colorMode === "light"? "#000" : "#ccc"} fontSize={50} fontWeight='bold !important' style={{letterSpacing: '-3px'}}>useAuth</Heading>
           </Box>
           <Heading as="h2" color={colorMode === "light"? "#000" : "#ccc"} size="lg" mb={2}>Authentication for React Apps</Heading>
-          <code>yarn add react-use-auth</code>
+          <code color="current">yarn add react-use-auth</code>
         </Box>
       </Box>
 
