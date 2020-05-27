@@ -17,7 +17,7 @@ const IndexPage = (props) => {
             aria-label='Lock icon'
             isRound="true"
             variant="ghost"
-            color="lock"
+            color={colorMode === "light"? "#00961A" : "#00961A"}
             padding="0"
             ml="-.3rem"
             fontSize="36px"            
@@ -26,7 +26,7 @@ const IndexPage = (props) => {
           <Heading as="h1" color={colorMode === "light"? "#000" : "#ccc"} fontSize={50} fontWeight='bold !important' style={{letterSpacing: '-3px'}}>useAuth</Heading>
           </Box>
           <Heading as="h2" color={colorMode === "light"? "#000" : "#ccc"} size="lg" mb={2}>Authentication for React Apps</Heading>
-          <code variantcolor="red">yarn add react-use-auth</code>
+          <code color={colorMode === "light"? "#000" : "#ccc"}>yarn add react-use-auth</code>
         </Box>
       </Box>
 
