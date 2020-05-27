@@ -2,6 +2,7 @@ const CustomColors = {
     transparent: "transparent",
     black: "#000",
     white: "#ccc",
+    lock: "#00961A",
     mode: {
       light: {
           pri: '#000',
@@ -12,7 +13,7 @@ const CustomColors = {
           background: "#ccc",
           text: "#334E68",
           heading: "#102a43",
-          lock: "00961A",
+          lock: "#00961A",
           icon: "#9FB3C8",
           link: "#9F00FF",
           },
@@ -25,7 +26,7 @@ const CustomColors = {
           background: "#102a43",
           text: "#EFF2FB",
           heading: "#ccc",
-          lock: "00961A",
+          lock: "#00961A",
           icon: "#486581",
           link: "#F8CCFF",
         },
