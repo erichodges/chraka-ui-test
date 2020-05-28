@@ -23,11 +23,10 @@ const IndexPage = (props) => {
             ml="-.3rem"
             fontSize="36px"            
           />
-          <Heading as="h1" color={colorMode === "light"? "#000" : "#ccc"} fontSize={50} fontWeight='bold !important' style={{letterSpacing: '-3px'}}>useAuth</Heading>
+          <Heading as="h1" color={colorMode === "light"? "#000" : "#ccc"} fontSize={50} style={{letterSpacing: '-3px'}}><b>useAuth</b></Heading>
           </Box>
           <Heading as="h2" color={colorMode === "light"? "#000" : "#ccc"} size="lg" mb={2}>Authentication for React Apps</Heading>
-          <code>yarn add react-use-auth</code> <br />
-          <code> testing chakra</code>
+          <pre><code>yarn add react-use-auth</code></pre>
         </Box>
       </Box>
 
