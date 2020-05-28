@@ -3,10 +3,6 @@ import CustomColors from "./CustomColor"
 
 const CustomTheme = {
   ...theme,
-  // icons: {
-  //   ...theme.icons,
-  //   ...customIcons,
-  // },
   colors: {
     ...theme.colors,
     ...CustomColors, // add a file with custom colors and spread them here or just list them
