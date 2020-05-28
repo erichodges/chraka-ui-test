@@ -1,5 +1,5 @@
 
-import { Box, Heading } from "@chakra-ui/core";
+import { Box, Heading, useColorMode } from "@chakra-ui/core";
 import { Global } from '@emotion/core';
 import { MDXProvider } from "@mdx-js/react";
 import { Link } from "gatsby";
@@ -12,13 +12,16 @@ const components = {
   h2: props => <Heading as="h2" size="lg" fontWeight="900" mb="1rem" {...props} />,
   h3: props => <Heading as="h3" size="md" mb="1rem" {...props} />
 }
+
 const Layout = ({ children }) => {
+  
+  const { colorMode } = useColorMode();
 
   return (
     <>
       <Global styles={DocsStyles} />
       <Header />
-      <Box className="container">
+      <Box className="container" bg={colorMode === "light"? "gray.50" : "gray.900"}>
         <Box className="body">
           <Box ml={4} display={{ sm: 'none', md: 'block' }} className="sidebar">
             <ul className='sidenav'>

@@ -7,6 +7,16 @@ const IndexPage = (props) => {
 
   const { colorMode } = useColorMode();
   
+  const codeStyleLight = {
+    fontFamily: "Menlo, monospace",
+    color: "#416B9C"
+  }
+
+  const codeStyleDark = {
+    fontFamily: "Menlo, monospace",
+    color: "#9DDDFF"
+  }
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -26,7 +36,9 @@ const IndexPage = (props) => {
           <Heading as="h1" color={colorMode === "light"? "#000" : "#ccc"} fontSize={50} style={{letterSpacing: '-3px'}}><b>useAuth</b></Heading>
           </Box>
           <Heading as="h2" color={colorMode === "light"? "#000" : "#ccc"} size="lg" mb={2}>Authentication for React Apps</Heading>
-          <pre><code>yarn add react-use-auth</code></pre>
+          <span style={colorMode === "light"? codeStyleLight : codeStyleDark}>yarn add react-use-auth</span>
+          <br />
+          <span style={colorMode === "light"? codeStyleLight : codeStyleDark}>npm i react-use-auth</span>
         </Box>
       </Box>
 
