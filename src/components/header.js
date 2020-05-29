@@ -48,7 +48,7 @@ const Header = props => {
       {...props}
     >
       <Flex  align="center" >
-        <Box mt={1} ml={1} mr={3} display={{ sm: "block", md: "none" }} ref={btnRef} onClick={onOpen} css={css`cursor: pointer; padding-bottom: 2px`}>
+        <Box mt={3} ml={1} mr={3} display={{ sm: "block", md: "none" }} ref={btnRef} onClick={onOpen} css={css`cursor: pointer; padding-bottom: 2px`}>
           <svg
             fill={colorMode === "light"? "black" : "#ccc"}
             width="17px"
@@ -70,16 +70,28 @@ const Header = props => {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader>Header</DrawerHeader>
+            <DrawerHeader></DrawerHeader>
   
             <DrawerBody>
             <Link to="/docs/getting-started">
-              Docs/Getting Started
+              <span mb={2}><b>Getting Started</b></span>
+            </Link>
+            <br />
+            <Link to="/docs/auth/">
+              <b>Auth Provider</b>
+            </Link>
+            <br />
+            <Link to="/docs/callback">
+              <b>Callback Page</b>
+            </Link>
+            <br />
+            <Link to="/docs/enjoy">
+              <b>Enjoy</b>
             </Link>
             </DrawerBody>
   
             <DrawerFooter>
-              Drawer Footer content here
+              {/* Drawer Footer content here */}
               
             </DrawerFooter>
           </DrawerContent>

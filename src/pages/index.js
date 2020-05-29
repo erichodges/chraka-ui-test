@@ -1,7 +1,8 @@
-import { Box, Heading, IconButton, useColorMode } from "@chakra-ui/core"
-import React from "react"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import { Box, Button, Heading, IconButton, useColorMode } from "@chakra-ui/core";
+import { Link } from "gatsby";
+import React from "react";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
 
 const IndexPage = (props) => {
 
@@ -16,6 +17,7 @@ const IndexPage = (props) => {
     fontFamily: "Menlo, monospace",
     color: "#9DDDFF"
   }
+
 
   return (
     <Layout>
@@ -38,7 +40,11 @@ const IndexPage = (props) => {
           <Heading as="h2" color={colorMode === "light"? "#000" : "#ccc"} size="lg" mb={2}>Authentication for React Apps</Heading>
           <span style={colorMode === "light"? codeStyleLight : codeStyleDark}>yarn add react-use-auth</span>
           <br />
-          <span style={colorMode === "light"? codeStyleLight : codeStyleDark}>npm i react-use-auth</span>
+          <span style={colorMode === "light"? codeStyleLight : codeStyleDark}>npm i react-use-auth</span>          
+          <br />
+          <Link to="/docs/getting-started">
+          <Button size="lg" mt={4} bg="#008D19" color="#fff" _hover={{ bg: "#00A51D" }} rightIcon="arrow-forward" >Get Started</Button>
+          </Link>
         </Box>
       </Box>
 

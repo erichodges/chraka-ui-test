@@ -26,10 +26,10 @@ const Layout = ({ children }) => {
           <Box ml={4} display={{ sm: 'none', md: 'block' }} className="sidebar">
             <ul className='sidenav'>
             <li></li>
-              <li><Link to="./docs/getting-started/">Getting Started</Link></li>
-              <li><Link to="./docs/auth/">Auth Provider</Link></li>
-              <li><Link to="./docs/callback">Callback page</Link></li>
-              <li><Link to="./docs/enjoy">Enjoy</Link></li>
+              <li><Link to="/docs/getting-started/">Getting Started</Link></li>
+              <li><Link to="/docs/auth/">Auth Provider</Link></li>
+              <li><Link to="/docs/callback">Callback Page</Link></li>
+              <li><Link to="/docs/enjoy">Enjoy</Link></li>
             </ul>
           </Box>
           <MDXProvider components={components}>
