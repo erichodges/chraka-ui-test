@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
       <Header />
       <Box className="container" bg={colorMode === "light"? "gray.50" : "gray.900"}>
         <Box className="body">
-          <Box ml={4} display={{ sm: 'none', md: 'block' }} className="sidebar">
+          <Box ml={4} display={{ sm: 'none', md: 'block' }} className="sidebar" color={colorMode === "light"? "#000" : "#ccc"}>
             <ul className='sidenav'>
             <li></li>
               <li><Link to="/docs/getting-started/">Getting Started</Link></li>
@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
             </ul>
           </Box>
           <MDXProvider components={components}>
-          <Box fontSize={["sm", "md", "lg", "xl"]} maxW="40rem" pl='2rem' pr='1rem' width={{sm: 'full'}} display='block' className="content">
+          <Box fontSize={["sm", "md", "lg", "xl"]} maxW="40rem" pl='2rem' pr='1rem' width={{sm: 'full'}} color={colorMode === "light"? "#000" : "#ccc"} display='block' className="content">
             {children}
           </Box>
           </MDXProvider>
