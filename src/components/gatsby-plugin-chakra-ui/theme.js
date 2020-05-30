@@ -1,8 +1,10 @@
 import { theme } from '@chakra-ui/core';
 import CustomColors from '../Theme/CustomColor';
 
-const customTheme = {    
+const customTheme = {
+  ...theme,
   colors: {
+    ...theme.colors,
     ...CustomColors, // add a file with custom colors and spread them here or just list them
   },
   fonts: {
@@ -68,7 +70,7 @@ const customTheme = {
     "24": "11rem",
     "32": "16rem",
   },
-  ...theme,
+  
 };
 
 export default customTheme;
