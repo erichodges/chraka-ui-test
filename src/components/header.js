@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, Heading, IconButton, Text, useColorMode, useDisclosure } from "@chakra-ui/core";
+import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, Heading, IconButton, Stack, Text, useColorMode, useDisclosure } from "@chakra-ui/core";
 import { css, jsx } from '@emotion/core';
 import { Link } from "gatsby";
 import React from "react";
@@ -70,24 +70,26 @@ const Header = props => {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader></DrawerHeader>
-  
+            <DrawerHeader><b>Docs</b></DrawerHeader>
+              
             <DrawerBody>
-            <Link to="/docs/getting-started">
-              <span mb={2}><b>Getting Started</b></span>
-            </Link>
-            <br />
-            <Link to="/docs/auth/">
-              <b>Auth Provider</b>
-            </Link>
-            <br />
-            <Link to="/docs/callback">
-              <b>Callback Page</b>
-            </Link>
-            <br />
-            <Link to="/docs/enjoy">
-              <b>Enjoy</b>
-            </Link>
+              <Stack spacing={2}>
+                <Link to="/docs/getting-started">
+                  <span><b>Getting Started</b></span>
+                </Link>
+                <br />
+                <Link to="/docs/auth/">
+                  <b>Auth Provider</b>
+                </Link>
+                <br />
+                <Link to="/docs/callback">
+                  <b>Callback Page</b>
+                </Link>
+                <br />
+                <Link to="/docs/enjoy">
+                  <b>Enjoy</b>
+                </Link>
+              </Stack>
             </DrawerBody>
   
             <DrawerFooter>
