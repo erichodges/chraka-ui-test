@@ -73,7 +73,7 @@ const Header = props => {
             <DrawerHeader><b>Docs</b></DrawerHeader>
               
             <DrawerBody>
-              <Stack spacing={2}>
+              <Stack spacing="10p">
                 <Link to="/docs/getting-started">
                   <span><b>Getting Started</b></span>
                 </Link>
