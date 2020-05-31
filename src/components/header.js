@@ -107,6 +107,22 @@ const Header = props => {
         </Flex>
       </Flex>
 
+      <IconButton
+        onClick={toggleColorMode}
+        display={{ xs: "flex", sm: "flex", md: "none" }}
+        icon={colorMode === "light" ? "moon" : "sun"}
+        style={iconButtonStyle}
+        isRound="true"
+        variant="ghost"
+        color="current"
+        ml="2"
+        fontSize="20px"
+        aria-label={`Switch to ${
+          colorMode === "light" ? "dark" : "light"
+          } mode`
+        }            
+      /> 
+
       <Box
         display={{ xs: "none", sm: "none", md: "flex"}}
         width={{ sm: "full", md: "auto" }}
