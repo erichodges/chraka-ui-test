@@ -68,7 +68,7 @@ const Header = props => {
           finalFocusRef={btnRef}
           >
           <DrawerOverlay />
-          <DrawerContent>
+          <DrawerContent color={colorMode === "light"? "#000" : "#ccc"}>
             <DrawerCloseButton />
             <DrawerHeader><b>Docs</b></DrawerHeader>
               
