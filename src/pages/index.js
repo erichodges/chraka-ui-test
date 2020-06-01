@@ -28,7 +28,7 @@ const IndexPage = (props) => {
       <SEO title="Home" />
       <Box bg={colorMode === "light"? "gray.50" : "gray.900"} h="94vh" w="100vw" display="flex" flexDir="column" alignItems="center" justifyContent="center">
         <Box>
-          <Box display="flex" alignItems="center">
+          <Box display="flex" alignItems="center" mt="-10rem">
           <IconButton
             icon="lock"
             aria-label='Lock icon'

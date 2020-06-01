@@ -34,6 +34,11 @@ const Header = props => {
     boxShadow: 'none'
   }
 
+  const logoStyle = {
+    letterSpacing: '-3px',
+    font: '600 2.5rem Asap'
+  }
+
   return (
     
     <Flex
@@ -100,7 +105,7 @@ const Header = props => {
         </Drawer>
         {/* ====== End Drawer Section ====== */}
         
-          <Link to='/'><Heading as="h1" color={colorMode === "light"? "#000" : "#ccc"} fontSize={40} m={0} style={{letterSpacing: '-3px'}}>
+          <Link to='/'><Heading as="h1" color={colorMode === "light"? "#000" : "#ccc"} fontSize={40} m={0} style={logoStyle}>
             useAuth
           </Heading>
           </Link>
