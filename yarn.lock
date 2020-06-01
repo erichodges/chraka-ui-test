@@ -13952,6 +13952,11 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
+typeface-asap@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/typeface-asap/-/typeface-asap-1.1.3.tgz#ee86d6b13450ff4da6cc4888e971d8c87b4ba70e"
+  integrity sha512-bPD7XMNLLp4PeVfOaYjrmYDzKLi2ced4eZSB8bel2tXPmbwM123WQPqg/Dse8P18f1ndahNi722EgWQ9mp1JPQ==
+
 unbzip2-stream@^1.0.9:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/unbzip2-stream/-/unbzip2-stream-1.4.1.tgz#151b104af853df3efdaa135d8b1eca850a44b426"
