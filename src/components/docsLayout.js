@@ -7,16 +7,28 @@ import React from "react";
 import { DocsStyles } from "./DocsLayoutStyles";
 import Header from "./header";
 
-const components = {
-  h1: props => <Heading as="h1" size="xl" fontWeight="700" mb="1.2rem" mt="-3px" {...props} />,
-  h2: props => <Heading as="h2" size="lg" fontWeight="900" mb="1rem" {...props} />,
-  h3: props => <Heading as="h3" size="md" mb="1rem" {...props} />
-}
+
 
 const Layout = ({ children }) => {
   
   const { colorMode } = useColorMode();
+  
+  const h1Style = {    
+    font: '700 2rem Roboto',
+    fontWeight: 'bold'
+  }
 
+  const h2Style = {
+    font: '700 1rem Roboto',
+    fontWeight: 'bold'
+  }
+
+  const components = {
+    h1: props => <Heading as="h1" style={h1Style} mb=".75rem" mt="-3px" {...props} />,
+    h2: props => <Heading as="h2" style={h2Style}  mb="1rem" {...props} />,
+    h3: props => <Heading as="h3" size="md" mb="1rem" {...props} />
+  }
+  
   return (
     <>
       <Global styles={DocsStyles} />

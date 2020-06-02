@@ -21,25 +21,31 @@ export const DocsStyles = css`
   }
 
     body {
-        overflow: hidden;
-        padding: 0;
+      font-family: Roboto;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    h2 {
+      font-family: Roboto !important;
+      font-size: 1.6rem !important;
     }
 
     .container {
-    height: 90vh;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: 1fr;
+      height: 90vh;
+      width: 100vw;
+      display: grid;
+      grid-template-columns: 1fr;
 
-    /*  to add a footer, use 1fr 30px(for the footer) etc in grid-template-rows  */
-    grid-template-rows: 1fr;
+      /*  to add a footer, use 1fr 30px(for the footer) etc in grid-template-rows  */
+      grid-template-rows: 1fr;
     }
 
     .body {
-        display: grid;
-        grid-template-columns: .75fr 3fr;
-        overflow: hidden;
-        margin-top: 1rem;
+      display: grid;
+      grid-template-columns: .75fr 3fr;
+      overflow: hidden;
+      margin-top: 1rem;
     }
 
     @media (max-width: 767px) {

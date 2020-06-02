@@ -9,7 +9,7 @@ const customTheme = {
   },
   fonts: {
     heading: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-    body: 'apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+    body: 'Roboto, apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
     mono: "Menlo, monospace",
   },
   fontSizes: {
@@ -52,7 +52,7 @@ const customTheme = {
     wider: "0.05em",
     widest: "0.1em",
   },
-  breakpoints: ["30em", "48em", "62em", "80em"],
+  breakpoints: ["30rem", "48rem", "62rem", "80rem"],
   space: {
     "0": "0",
     "1": "0.125rem",

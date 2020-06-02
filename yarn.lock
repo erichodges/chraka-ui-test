@@ -14001,6 +14001,11 @@ typeface-asap@^1.1.3:
   resolved "https://registry.yarnpkg.com/typeface-asap/-/typeface-asap-1.1.3.tgz#ee86d6b13450ff4da6cc4888e971d8c87b4ba70e"
   integrity sha512-bPD7XMNLLp4PeVfOaYjrmYDzKLi2ced4eZSB8bel2tXPmbwM123WQPqg/Dse8P18f1ndahNi722EgWQ9mp1JPQ==
 
+typeface-roboto@^0.0.75:
+  version "0.0.75"
+  resolved "https://registry.yarnpkg.com/typeface-roboto/-/typeface-roboto-0.0.75.tgz#98d5ba35ec234bbc7172374c8297277099cc712b"
+  integrity sha512-VrR/IiH00Z1tFP4vDGfwZ1esNqTiDMchBEXYY9kilT6wRGgFoCAlgkEUMHb1E3mB0FsfZhv756IF0+R+SFPfdg==
+
 unbzip2-stream@^1.0.9:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/unbzip2-stream/-/unbzip2-stream-1.4.1.tgz#151b104af853df3efdaa135d8b1eca850a44b426"

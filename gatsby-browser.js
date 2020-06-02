@@ -9,6 +9,7 @@ import vsDark from 'prism-react-renderer/themes/vsDark';
 import { AuthProvider } from "react-use-auth";
 import customTheme from "./src/components/gatsby-plugin-chakra-ui/theme";
 require("typeface-asap");
+require("typeface-roboto");
 
 const GlobalStyles = css`
   /*
