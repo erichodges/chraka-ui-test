@@ -24,8 +24,8 @@ const Layout = ({ children }) => {
   }
 
   const components = {
-    h1: props => <Heading as="h1" style={h1Style} mb=".75rem" mt="-3px" {...props} />,
-    h2: props => <Heading as="h2" style={h2Style}  mb="1rem" {...props} />,
+    h1: props => <Heading as="h1" className="h1" style={h1Style} mb=".75rem" mt="-3px" {...props} />,
+    h2: props => <Heading as="h2" className="h2" style={h2Style} mb="1rem" {...props} />,
     h3: props => <Heading as="h3" size="md" mb="1rem" {...props} />
   }
   

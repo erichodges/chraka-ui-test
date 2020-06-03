@@ -10,15 +10,15 @@ export const DocsStyles = css`
      box-shadow: none;
    }
 
-   html {
-    scroll-behavior: smooth;
-  }
-
-  @media screen and (prefers-reduced-motion: reduce) {
     html {
-      scroll-behavior: auto;
+      scroll-behavior: smooth;
     }
-  }
+
+    @media screen and (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
 
     body {
       font-family: Roboto;
@@ -29,6 +29,46 @@ export const DocsStyles = css`
     h2 {
       font-family: Roboto !important;
       font-size: 1.6rem !important;
+    }
+
+    @media (min-width: 360px) {
+      .h1 {
+        font-size: 1.4rem !important;
+      }
+
+      .h2 {
+        font-size: 1.1rem !important;
+      }
+    }
+
+    @media (min-width: 500px) {
+      .h1 {
+        font-size: 1.5rem !important;
+      }
+
+      .h2 {
+        font-size: 1.4rem !important;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .h1 {
+        font-size: 1.7rem !important;
+      }
+
+      .h2 {
+        font-size: 1.5rem !important;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .h1 {
+        font-size: 2rem !important;
+      }
+
+      .h2 {
+        font-size: 1.6rem !important;
+      }
     }
 
     .container {
