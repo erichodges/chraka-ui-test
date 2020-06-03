@@ -47,7 +47,7 @@ export const DocsStyles = css`
       }
 
       .h2 {
-        font-size: 1.4rem !important;
+        font-size: 1.3rem !important;
       }
     }
 
@@ -57,7 +57,7 @@ export const DocsStyles = css`
       }
 
       .h2 {
-        font-size: 1.5rem !important;
+        font-size: 1.4rem !important;
       }
     }
 
