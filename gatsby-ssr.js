@@ -1,1 +1,5 @@
-// export { wrapRootElement } from "./gatsby-browser";
+exports.onRenderBody = ({ setBodyAttributes }) => {
+    setBodyAttributes({
+        className: 'no-js'
+      });
+  };

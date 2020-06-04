@@ -60,6 +60,12 @@ export const wrapRootElement = ({ element }) => {
     localStorage.setItem('darkMode', 'false');
   }
 
+  exports.onClientEntry = () => {
+    window.addEventListener('load', () => {
+      document.body.className = document.body.className.replace(/\bno-js\b/, '');
+    });
+  }
+  
 return (
   <AuthProvider
     navigate={navigate}
