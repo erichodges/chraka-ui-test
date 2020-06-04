@@ -9,16 +9,24 @@ const Login = () => {
   const { isAuthenticated, login, logout } = useAuth();
   const { colorMode } = useColorMode();
 
+  const loginButtonStyle = {
+    fontFamily: 'Roboto',
+    font: 'Roboto !important',
+    fontWeight: '600',
+    fontSize: '1.1rem'
+
+  }
+
   if (isAuthenticated()) {
     return (
       <>
-        <Button onClick={logout} color={colorMode === "light"? "black" : "#ccc"}>Logout</Button>
+        <Button style={loginButtonStyle} onClick={logout} color={colorMode === "light"? "black" : "#ccc"}>Logout</Button>
       </>
     )
   } else {
     return (
       <>
-        <Button onClick={login} color={colorMode === "light"? "black" : "#ccc"}>Login</Button>
+        <Button style={loginButtonStyle} onClick={login} color={colorMode === "light"? "black" : "#ccc"}>Login</Button>
       </>
     )
   }
@@ -38,6 +46,10 @@ const Header = props => {
   const logoStyle = {
     letterSpacing: '-3px',
     font: '600 2.5rem Asap'
+  }
+  
+  const menuItemStyle = {
+    font: '600 1.2rem Roboto'
   }
 
   return (
@@ -139,11 +151,12 @@ const Header = props => {
       >
         <Box display="flex" color={colorMode === "light"? "black" : "#ccc"} alignContent="center" alignItems="center" mx={5}>
         <Link to="/docs/getting-started">
-        <Box><Text  mt={{ base: 4, md: 0 }} mr={4} display="block">Docs &nbsp;</Text></Box>
+        <Box><Text  style={menuItemStyle} mt={{ base: 4, md: 0 }} mr={4} display="block">Docs &nbsp;</Text></Box>
         </Link>
         
         {/* <MenuItems>Examples</MenuItems> */}
-        <Box><Text mt={{ base: 4, md: 0 }} mr={4} display="block"><a href="https://github.com/Swizec/useAuth">GitHub &nbsp;</a></Text></Box>
+
+        <Box><Text style={menuItemStyle} mt={{ base: 4, md: 0 }} mr={4} display="block"><a href="https://github.com/Swizec/useAuth">GitHub &nbsp;</a></Text></Box>
         <Login />
         </Box>
         <Box
