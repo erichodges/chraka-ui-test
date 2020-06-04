@@ -54,17 +54,21 @@ const component = {
     );
   },
 };
+
+exports.onClientEntry = () => {
+  window.addEventListener('load', () => {
+    document.body.className = document.body.className.replace(/\bno-js\b/, '');
+  });
+}
+
+
 export const wrapRootElement = ({ element }) => {
  
   if (typeof window !== 'undefined') {
     localStorage.setItem('darkMode', 'false');
   }
 
-  exports.onClientEntry = () => {
-    window.addEventListener('load', () => {
-      document.body.className = document.body.className.replace(/\bno-js\b/, '');
-    });
-  }
+
   
 return (
   <AuthProvider
