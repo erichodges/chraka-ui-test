@@ -15,17 +15,17 @@ const Layout = ({ children }) => {
   
   const h1Style = {    
     font: '700 2rem Roboto',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   }
 
   const h2Style = {
     font: '700 1rem Roboto',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
   }
 
   const components = {
     h1: props => <Heading as="h1" className="h1" style={h1Style} mb=".75rem" mt="-3px" {...props} />,
-    h2: props => <Heading as="h2" className="h2" style={h2Style} mb="1rem" {...props} />,
+    h2: props => <Heading as="h2" className="h2" style={h2Style} mt='-1rem' mb="1rem" {...props} />,
     h3: props => <Heading as="h3" size="md" mb="1rem" {...props} />
   }
   

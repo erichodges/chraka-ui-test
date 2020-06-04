@@ -72,7 +72,7 @@ export const DocsStyles = css`
     }
 
     .container {
-      height: 90vh;
+      height: 100vh;
       width: 100vw;
       display: grid;
       grid-template-columns: 1fr;
