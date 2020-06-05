@@ -5,7 +5,7 @@ const { css, Global, jsx } = require('@emotion/core');
 const { MDXProvider } = require('@mdx-js/react');
 require('focus-visible/dist/focus-visible');
 const { navigate } = require("gatsby");
-const Highlight, { defaultProps } = require('prism-react-renderer');
+const { Highlight, defaultProps } = require('prism-react-renderer');
 const { vsDark } = require('prism-react-renderer/themes/vsDark');
 const { AuthProvider } = require("react-use-auth");
 const { customTheme } = require("./src/components/gatsby-plugin-chakra-ui/theme");
