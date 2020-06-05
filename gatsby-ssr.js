@@ -1,13 +1,14 @@
 /** @jsx jsx */
-import { ColorModeProvider, CSSReset, ThemeProvider } from "@chakra-ui/core";
-import { css, Global, jsx } from '@emotion/core';
-import { MDXProvider } from '@mdx-js/react';
-import 'focus-visible/dist/focus-visible';
-import { navigate } from "gatsby";
-import Highlight, { defaultProps } from 'prism-react-renderer';
-import vsDark from 'prism-react-renderer/themes/vsDark';
-import { AuthProvider } from "react-use-auth";
-import customTheme from "./src/components/gatsby-plugin-chakra-ui/theme";
+const React = require("react")
+const { ColorModeProvider, CSSReset, ThemeProvider } = require("@chakra-ui/core");
+const { css, Global, jsx } = require('@emotion/core');
+const { MDXProvider } = require('@mdx-js/react');
+require('focus-visible/dist/focus-visible');
+const { navigate } = require("gatsby");
+const Highlight, { defaultProps } = require('prism-react-renderer');
+const { vsDark } = require('prism-react-renderer/themes/vsDark');
+const { AuthProvider } = require("react-use-auth");
+const { customTheme } = require("./src/components/gatsby-plugin-chakra-ui/theme");
 require("typeface-asap");
 require("typeface-roboto");
 
@@ -68,7 +69,7 @@ const component = {
 //     </Provider>
 //   )
 // }
-// const React = require("react")
+
 
 exports.wrapRootElement = ({ element }) => {
  
