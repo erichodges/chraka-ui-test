@@ -8,8 +8,8 @@ const customTheme = {
     ...CustomColors, // add a file with custom colors and spread them here or just list them
   },
   fonts: {
-    heading: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-    body: 'Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+    heading: 'Roboto, sans-serif',
+    body: 'Roboto, sans-serif',
     mono: "Menlo, monospace",
   },
   fontSizes: {

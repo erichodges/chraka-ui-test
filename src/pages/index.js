@@ -42,12 +42,13 @@ const IndexPage = (props) => {
               aria-label='Lock icon'
               isRound="true"
               variant="ghost"
-              color={colorMode === "light"? "#00961A" : "#00961A"}
+              color="green.600"
+              // color={colorMode === "light"? "#00961A" : "#00961A"}
               padding="0"
               ml="-.3rem"
               fontSize="36px"            
             />
-            <Heading as="h1" color={colorMode === "light"? "#000" : "#ccc"} fontSize={50} style={logoStyle}>useAuth</Heading>
+            <Heading as="h1" color={colorMode === "light"? "#000" : "#ccc"} fontSize={50} css={logoStyle}>useAuth</Heading>
           </Box>
           <Heading as="h2" style={h2Style} color={colorMode === "light"? "#000" : "#ccc"} size="lg" mb={2}
           >

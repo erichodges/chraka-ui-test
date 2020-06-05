@@ -5,6 +5,7 @@ module.exports = {
     author: `Eric Hodges`,
   },
   plugins: [
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -39,8 +40,7 @@ module.exports = {
           },
         ],
       },
-    },
-    `gatsby-plugin-emotion`,
+    },    
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-smoothscroll`,
