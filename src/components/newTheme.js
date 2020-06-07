@@ -2,8 +2,8 @@
 export default {
     breakpoints: ["360px", "768px", "1024px", "1440px"],
     fonts: {
-      heading: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
-      body: 'apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
+      heading: 'Roboto'
+      body: 'Roboto',
       mono: "Menlo, monospace",
     },
     fontSizes: {

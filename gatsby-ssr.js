@@ -22,8 +22,8 @@ const GlobalStyles = css`
      box-shadow: none;
    }
 
-   body {
-    font-family: Roboto !important;
+   h1 {
+    font-family: Asap !important;
    }
 
    .logo-style {
