@@ -74,7 +74,7 @@ const component = {
 exports.wrapRootElement = ({ element }) => {
  
   if (typeof window !== 'undefined') {
-    localStorage.setItem('darkMode', 'true');
+    localStorage.setItem('darkMode', 'false');
   }
   
 return (
