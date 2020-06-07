@@ -1,6 +1,7 @@
-import { css } from '@emotion/core';
+// import { css } from '@emotion/core';
+import styled from '@emotion/styled';
 
-export const DocsStyles = css`
+export const DocsStyles = styled.div`
   /*
     This will hide the focus indicator if the element receives focus via the mouse,
     but it will still show up on keyboard focus.
@@ -193,12 +194,6 @@ export const DocsStyles = css`
         border-radius: 3px;
       }
     }
-
-
-
-
-
-
-    
+ 
 `;
 

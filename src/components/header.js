@@ -13,7 +13,7 @@ const Login = () => {
     fontFamily: 'Roboto',
     font: 'Roboto !important',
     fontWeight: '600',
-    fontSize: '1.1rem'
+    fontSize: '1.05rem'
 
   }
 
@@ -49,7 +49,7 @@ const Header = props => {
   }
   
   const menuItemStyle = {
-    font: '600 1.2rem Roboto'
+    font: '600 1.05rem Roboto'
   }
 
   return (
