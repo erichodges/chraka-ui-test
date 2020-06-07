@@ -5,6 +5,7 @@ module.exports = {
     author: `Eric Hodges`,
   },
   plugins: [
+    `gatsby-plugin-chakra-ui`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     {
@@ -21,7 +22,6 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
     },
-    `gatsby-plugin-chakra-ui`,
     `gatsby-transformer-remark`,
     {
     resolve: `gatsby-plugin-mdx`,

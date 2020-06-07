@@ -1,4 +1,5 @@
 import { Box, Button, Heading, IconButton, useColorMode } from "@chakra-ui/core";
+import { css } from '@emotion/core';
 import { Link } from "gatsby";
 import React from "react";
 import Layout from "../components/layout";
@@ -18,10 +19,10 @@ const IndexPage = (props) => {
     color: "#9DDDFF"
   }
 
-  const logoStyle = {
-    letterSpacing: '-4px',
-    font: '600 3.2rem Asap'
-  }
+  const logoStyle = css`
+    letter-spacing: -4px;
+    font: 600 3.2rem Asap;
+  `
 
   const h2Style = {
     font: '600 1.5rem Roboto'
@@ -43,12 +44,11 @@ const IndexPage = (props) => {
               isRound="true"
               variant="ghost"
               color="green.600"
-              // color={colorMode === "light"? "#00961A" : "#00961A"}
               padding="0"
               ml="-.3rem"
               fontSize="36px"            
             />
-            <Heading as="h1" color={colorMode === "light"? "#000" : "#ccc"} fontSize={50} css={logoStyle}>useAuth</Heading>
+            <Heading as="h1" color={colorMode === "light"? "#000" : "#ccc"} fontSize={50} className="logo-style" css={logoStyle}>useAuth</Heading>
           </Box>
           <Heading as="h2" style={h2Style} color={colorMode === "light"? "#000" : "#ccc"} size="lg" mb={2}
           >

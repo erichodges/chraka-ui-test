@@ -21,6 +21,15 @@ const GlobalStyles = css`
      outline: none;
      box-shadow: none;
    }
+
+   body {
+    font-family: Roboto !important;
+   }
+
+   .logo-style {
+    letter-spacing: -4px;
+    font: 600 3.2rem Asap;
+   }
 `;
 
 // dark themes: vsDark, dracula, duotoneDark (default), nightOwl, oceanicNext
@@ -55,21 +64,6 @@ const component = {
     );
   },
 };
-
-// const React = require("react")
-// const { Provider } = require("react-redux")
-
-// const createStore = require("./src/state/createStore")
-// const store = createStore()
-
-// exports.wrapRootElement = ({ element }) => {
-//   return (
-//     <Provider store={store}>
-//       {element}
-//     </Provider>
-//   )
-// }
-
 
 exports.wrapRootElement = ({ element }) => {
  
