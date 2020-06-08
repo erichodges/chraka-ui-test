@@ -22,13 +22,13 @@ const GlobalStyles = css`
      box-shadow: none;
    }
 
-   h1 {
-    font-family: Asap !important;
+   h2 {
+    font-family: Roboto;
    }
 
    .logo-style {
+    font: 600 3.2rem Asap !important;
     letter-spacing: -4px;
-    font: 600 3.2rem Asap;
    }
 `;
 
