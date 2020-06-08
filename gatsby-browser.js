@@ -11,6 +11,12 @@ import customTheme from "./src/components/gatsby-plugin-chakra-ui/theme";
 require("typeface-asap");
 require("typeface-roboto");
 
+export const onClientEntry = () => {
+  window.addEventListener('load', () => {
+    document.body.className = document.body.className.replace(/\bno-js\b/, '');
+  });
+}
+
 const GlobalStyles = css`
   /*
     This will hide the focus indicator if the element receives focus    via the mouse,
@@ -54,12 +60,6 @@ const component = {
     );
   },
 };
-
-// export const onClientEntry = () => {
-//   window.addEventListener('load', () => {
-//     document.body.className = document.body.className.replace(/\bno-js\b/, '');
-//   });
-// }
 
 
 export const wrapRootElement = ({ element }) => {
