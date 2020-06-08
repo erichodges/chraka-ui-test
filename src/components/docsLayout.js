@@ -118,7 +118,7 @@ const DocsStyles = styled.div`
       list-style-type: none;
     }
 
-    @media (max-width: 360px) {
+    @media (max-width: 768px) {
       .sidebar {
         display: none;
       }

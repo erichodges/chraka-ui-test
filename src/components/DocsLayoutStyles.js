@@ -113,7 +113,7 @@ export const DocsStyles = styled.div`
       list-style-type: none;
     }
 
-    @media (min-width: 360px) {
+    @media (max-width: 768px) {
       .sidebar {
         display: none;
       }
