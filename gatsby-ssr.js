@@ -65,6 +65,12 @@ const component = {
   },
 };
 
+exports.onRenderBody = ({ setBodyAttributes }) => {
+  setBodyAttributes({
+      className: 'no-js'
+    });
+};
+
 exports.wrapRootElement = ({ element }) => {
  
   if (typeof window !== 'undefined') {
