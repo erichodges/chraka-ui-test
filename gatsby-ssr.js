@@ -12,6 +12,12 @@ const { customTheme } = require("./src/components/gatsby-plugin-chakra-ui/theme"
 require("typeface-asap");
 require("typeface-roboto");
 
+exports.onRenderBody = ({ setBodyAttributes }) => {
+  setBodyAttributes({
+      className: 'no-js'
+    });
+};
+
 const GlobalStyles = css`
   /*
     This will hide the focus indicator if the element receives focus    via the mouse,
@@ -63,12 +69,6 @@ const component = {
       </Highlight>
     );
   },
-};
-
-exports.onRenderBody = ({ setBodyAttributes }) => {
-  setBodyAttributes({
-      className: 'no-js'
-    });
 };
 
 exports.wrapRootElement = ({ element }) => {
