@@ -28,8 +28,8 @@ const GlobalStyles = css`
      box-shadow: none;
    }
 
-   body {
-     visibility: hidden;
+   .no-js {
+     display: none;
    }
 `;
 
