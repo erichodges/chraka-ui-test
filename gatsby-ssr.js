@@ -73,7 +73,7 @@ exports.wrapRootElement = ({ element }) => {
   }
   
 return (
-  <div style={{visibility: 'hidden'}}>
+  <div style={{display: 'none'}}>
   <AuthProvider
     navigate={navigate}
     auth0_domain="dev-i61q270i.auth0.com"
