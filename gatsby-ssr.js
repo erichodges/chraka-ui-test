@@ -28,15 +28,8 @@ const GlobalStyles = css`
      box-shadow: none;
    }
 
-   h2 {
-    font-family: Roboto;
-    font-display: swap;
-   }
-
-   .logo-style {
-    font: 600 3.2rem Asap !important;
-    font-display: swap;
-    letter-spacing: -4px;
+   body {
+     visibility: hidden;
    }
 `;
 

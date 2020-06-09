@@ -68,8 +68,6 @@ export const wrapRootElement = ({ element }) => {
     localStorage.setItem('darkMode', 'false');
   }
 
-
-  
 return (
   <AuthProvider
     navigate={navigate}
