@@ -7,7 +7,10 @@ module.exports = {
   plugins: [
     `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-chakra-ui`,
-    `gatsby-plugin-emotion`,
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {},
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

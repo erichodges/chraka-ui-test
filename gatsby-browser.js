@@ -7,7 +7,7 @@ import { navigate } from "gatsby";
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import vsDark from 'prism-react-renderer/themes/vsDark';
 import { AuthProvider } from "react-use-auth";
-import customTheme from "./src/components/gatsby-plugin-chakra-ui/theme.js";
+import customTheme from "./src/components/gatsby-plugin-chakra-ui/theme";
 require("typeface-asap");
 require("typeface-roboto");
 

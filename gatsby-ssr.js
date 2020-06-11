@@ -8,7 +8,7 @@ const { navigate } = require("gatsby");
 const { Highlight, defaultProps } = require('prism-react-renderer');
 const { vsDark } = require('prism-react-renderer/themes/vsDark');
 const { AuthProvider } = require("react-use-auth");
-const { customTheme } = require("./src/components/gatsby-plugin-chakra-ui/theme.js");
+const { customTheme } = require("./src/components/gatsby-plugin-chakra-ui/theme");
 require("typeface-asap");
 require("typeface-roboto");
 
