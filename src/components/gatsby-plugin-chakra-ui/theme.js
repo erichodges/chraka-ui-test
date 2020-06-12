@@ -1,5 +1,5 @@
 import { theme } from '@chakra-ui/core';
-import CustomColors from '../Theme/CustomColor';
+import CustomColors from './CustomColor';
 
 const customTheme = {
   ...theme,

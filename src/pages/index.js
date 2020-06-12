@@ -43,7 +43,7 @@ const IndexPage = (props) => {
               aria-label='Lock icon'
               isRound="true"
               variant="ghost"
-              color="green.600"
+              color="#00AB20"
               padding="0"
               ml="-.3rem"
               fontSize="36px"            
