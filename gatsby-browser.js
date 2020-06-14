@@ -7,7 +7,7 @@ import { navigate } from "gatsby";
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import vsDark from 'prism-react-renderer/themes/vsDark';
 import { AuthProvider } from "react-use-auth";
-import customTheme from "./src/components/gatsby-plugin-chakra-ui/theme";
+import theme from "./src/components/gatsby-plugin-chakra-ui/theme";
 require("typeface-asap");
 require("typeface-roboto");
 
@@ -67,6 +67,8 @@ export const wrapRootElement = ({ element }) => {
   if (typeof window !== 'undefined') {
     localStorage.setItem('darkMode', 'false');
   }
+  
+  console.log(theme);
 
 return (
   <AuthProvider
@@ -74,7 +76,7 @@ return (
     auth0_domain="dev-i61q270i.auth0.com"
     auth0_client_id="Gj8QSVdFBAQl3mFMapU5nH48qoybCygK"
     >
-    <ThemeProvider theme={customTheme}>
+    <ThemeProvider theme={theme}>
     <CSSReset />
     <Global style={GlobalStyles} />
     <ColorModeProvider>

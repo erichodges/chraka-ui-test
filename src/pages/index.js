@@ -7,6 +7,9 @@ import SEO from "../components/seo";
 
 const IndexPage = (props) => {
 
+  
+  console.log(props.theme);
+
   const { colorMode } = useColorMode();
   
   const codeStyleLight = {
@@ -43,7 +46,7 @@ const IndexPage = (props) => {
               aria-label='Lock icon'
               isRound="true"
               variant="ghost"
-              color="#00AB20"
+              color="#00AC20"
               padding="0"
               ml="-.3rem"
               fontSize="36px"            
