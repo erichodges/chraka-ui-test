@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { ColorModeProvider, CSSReset, ThemeProvider } from "@chakra-ui/core";
+// import { ColorModeProvider, CSSReset, ThemeProvider } from "@chakra-ui/core";
 import { css, Global, jsx } from '@emotion/core';
 import { MDXProvider } from '@mdx-js/react';
 import 'focus-visible/dist/focus-visible';
@@ -7,15 +7,9 @@ import { navigate } from "gatsby";
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import vsDark from 'prism-react-renderer/themes/vsDark';
 import { AuthProvider } from "react-use-auth";
-import theme from "./src/components/gatsby-plugin-chakra-ui/theme";
 require("typeface-asap");
 require("typeface-roboto");
 
-// export const onClientEntry = () => {
-//   window.addEventListener('load', () => {
-//     document.body.className = document.body.className.replace(/\bno-js\b/, '');
-//   });
-// }
 
 const GlobalStyles = css`
   /*
@@ -68,7 +62,7 @@ export const wrapRootElement = ({ element }) => {
     localStorage.setItem('darkMode', 'false');
   }
   
-  console.log(theme);
+  
 
 return (
   <AuthProvider
@@ -76,15 +70,14 @@ return (
     auth0_domain="dev-i61q270i.auth0.com"
     auth0_client_id="Gj8QSVdFBAQl3mFMapU5nH48qoybCygK"
     >
-    <ThemeProvider theme={theme}>
-    <CSSReset />
+   
+   
     <Global style={GlobalStyles} />
-    <ColorModeProvider>
     <MDXProvider components={component}>
       {element}
     </MDXProvider>
-    </ColorModeProvider>
-    </ThemeProvider>
+   
+   
   </AuthProvider>
   )
 }

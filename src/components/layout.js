@@ -1,7 +1,9 @@
 
+import { ColorModeProvider, CSSReset, ThemeProvider, useColorMode } from "@chakra-ui/core";
 import { graphql, useStaticQuery } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
+import theme from "./gatsby-plugin-chakra-ui/theme";
 import Header from "./header";
 
 
@@ -16,16 +18,21 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  
+  const colorMode = useColorMode();
 
-  return (
-    <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div>
-          <main>{children}</main>
-          <footer>
-          </footer>
-        </div>
-    </>
+  return (    
+    <ThemeProvider theme={theme}>
+      <ColorModeProvider>
+      <CSSReset />
+      <Header siteTitle={data.site.siteMetadata.title} />
+      <div>
+        <main bg={colorMode === "light"? "gray.50" : "gray.900"}>{children}</main>
+        <footer>
+        </footer>
+      </div>
+      </ColorModeProvider>
+    </ThemeProvider>
   )
 }
 
