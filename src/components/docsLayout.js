@@ -27,7 +27,7 @@ const DocsStyles = styled.div`
     }
 
     body {
-      font-family: Roboto;
+      font-family: Roboto !important;
       overflow: hidden;
       padding: 0;
     }
@@ -88,6 +88,7 @@ const DocsStyles = styled.div`
     }
 
     .body {
+      font-family: Roboto !important;
       display: grid;
       grid-template-columns: .75fr 3fr;
       overflow: hidden;
@@ -108,7 +109,7 @@ const DocsStyles = styled.div`
 
     .sidebar li {
       margin-bottom: .5rem;
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: bold;
       cursor: pointer;
     }
