@@ -44,12 +44,23 @@ const Header = props => {
   }
 
   const logoStyle = {
-    letterSpacing: '-3px',
-    font: '600 2.5rem Asap'
+    font: '600 2.5rem Asap',
+    letterSpacing: '-3px'
+    
   }
   
   const menuItemStyle = {
     font: '600 1.05rem Roboto'
+  }
+
+  const drawerItemStyle = {
+    font: '700 1.05rem Roboto'
+  }
+
+  const drawerHeadingStyle = {
+    font: '600 2.5rem Asap',
+    letterSpacing: '-3px',
+
   }
 
   return (
@@ -89,23 +100,23 @@ const Header = props => {
           <DrawerOverlay />
           <DrawerContent color={colorMode === "light"? "#000" : "#ccc"}>
             <DrawerCloseButton />
-            <DrawerHeader><b>Docs</b></DrawerHeader>
+            <DrawerHeader style={drawerHeadingStyle}><b>useAuth</b></DrawerHeader>
               
             <DrawerBody>
               <Stack spacing="10p">
-                <Link to="/docs/getting-started">
+                <Link to="/docs/getting-started" style={drawerItemStyle}>
                   <span><b>Getting Started</b></span>
                 </Link>
                 <br />
-                <Link to="/docs/auth/">
+                <Link to="/docs/auth/" style={drawerItemStyle}>
                   <b>Auth Provider</b>
                 </Link>
                 <br />
-                <Link to="/docs/callback">
+                <Link to="/docs/callback" style={drawerItemStyle}>
                   <b>Callback Page</b>
                 </Link>
                 <br />
-                <Link to="/docs/enjoy">
+                <Link to="/docs/enjoy" style={drawerItemStyle}>
                   <b>Enjoy</b>
                 </Link>
               </Stack>

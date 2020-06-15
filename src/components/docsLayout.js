@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 import { MDXProvider } from "@mdx-js/react";
 import { Link } from "gatsby";
 import React from 'react';
-// import { DocsStyles } from "./DocsLayoutStyles";
 import Header from "./header";
 
 const DocsStyles = styled.div`
@@ -45,6 +44,10 @@ const DocsStyles = styled.div`
       .h2 {
         font-size: 1.1rem !important;
       }
+      .sidenav li{
+        font-family: Roboto !important;
+        font-weight: bold;
+      }
     }
 
     @media (min-width: 500px) {
@@ -55,6 +58,10 @@ const DocsStyles = styled.div`
       .h2 {
         font-size: 1.3rem !important;
       }
+      .sidenav li{
+        font-family: Roboto !important;
+        font-weight: bold;
+      }
     }
 
     @media (min-width: 768px) {
@@ -64,6 +71,10 @@ const DocsStyles = styled.div`
 
       .h2 {
         font-size: 1.4rem !important;
+      }
+      .sidenav li{
+        font-family: Roboto !important;
+        font-weight: bold;
       }
     }
 
@@ -108,14 +119,16 @@ const DocsStyles = styled.div`
 
 
     .sidebar li {
-      margin-bottom: .5rem;
-      font-size: 1.05rem;
+      font-family: Roboto !important;
       font-weight: bold;
       cursor: pointer;
+
+      margin-bottom: .5rem;
     }
 
 
-    .sidenav {
+    .sidenav li{
+      font-size: 1.05rem;
       list-style-type: none;
     }
 
@@ -217,6 +230,8 @@ const Layout = ({ children }) => {
     font: '700 1rem Roboto',
     fontWeight: 'bold',
   }
+
+
 
   const components = {
     h1: props => <Heading as="h1" className="h1" style={h1Style} mb=".75rem" mt="-3px" {...props} />,
