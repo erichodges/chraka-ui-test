@@ -7,6 +7,7 @@ const theme = {
     ...defaultTheme.colors,
     ...CustomColors, // add a file with custom colors and spread them here or just list them
   },
+  breakpoints: ["30rem", "48rem", "62rem", "80rem"],
   fonts: {
     heading: 'Roboto, sans-serif',
     body: 'Roboto, sans-serif',
@@ -52,7 +53,6 @@ const theme = {
     wider: "0.05em",
     widest: "0.1em",
   },
-  breakpoints: ["30rem", "48rem", "62rem", "80rem"],
   space: {
     "0": "0",
     "1": "0.125rem",

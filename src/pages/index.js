@@ -7,8 +7,6 @@ import SEO from "../components/seo";
 
 const IndexPage = (props) => {
 
-  
-  console.log(props.theme);
 
   const { colorMode } = useColorMode();
   

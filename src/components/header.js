@@ -33,6 +33,8 @@ const Login = () => {
 }
 
 const Header = props => {
+  console.log(props.theme);
+  
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
@@ -139,7 +141,7 @@ const Header = props => {
 
       <IconButton
         onClick={toggleColorMode}
-        display={{ xs: "flex", sm: "flex", md: "none" }}
+        display={{ xs: "block", sm: "block", md: "none" }}
         icon={colorMode === "light" ? "moon" : "sun"}
         style={iconButtonStyle}
         isRound="true"
@@ -154,7 +156,7 @@ const Header = props => {
       /> 
 
       <Box
-        display={{ xs: "none", sm: "none", md: "flex"}}
+        display={{ xs: "none", sm: "none", md: "flex", lg: 'flex'}}
         width={{ sm: "full", md: "auto" }}
         alignContent="center"
         alignItems="center"

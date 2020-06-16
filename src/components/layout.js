@@ -6,7 +6,7 @@ import React from "react";
 import theme from "./gatsby-plugin-chakra-ui/theme";
 import Header from "./header";
 
-
+console.log(theme);
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -18,6 +18,7 @@ const Layout = ({ children }) => {
       }
     }
   `)
+
   
   const colorMode = useColorMode();
 
@@ -25,7 +26,7 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={theme}>
       <ColorModeProvider>
       <CSSReset />
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header theme={theme} siteTitle={data.site.siteMetadata.title} />
       <div>
         <main bg={colorMode === "light"? "gray.50" : "gray.900"}>{children}</main>
         <footer>
