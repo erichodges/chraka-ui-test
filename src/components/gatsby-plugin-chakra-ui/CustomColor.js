@@ -23,7 +23,7 @@ const CustomColors = {
           menu: '#fcfcfc',
           black: "#000",
           white: "#ccc",
-          background: "#102a43",
+          background: "#171923",
           text: "#EFF2FB",
           heading: "#ccc",
           lock: "#00961A",

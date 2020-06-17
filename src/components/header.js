@@ -98,7 +98,7 @@ const Header = props => {
           finalFocusRef={btnRef}
           >
           <DrawerOverlay />
-          <DrawerContent color={colorMode === "light"? "#000" : "#ccc"}>
+          <DrawerContent bg={colorMode === "light"? "gray.50" : "#171923"} color={colorMode === "light"? "#000" : "#ccc"}>
             <DrawerCloseButton />
             <DrawerHeader style={drawerHeadingStyle}><b>useAuth</b></DrawerHeader>
               
