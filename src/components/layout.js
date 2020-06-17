@@ -1,5 +1,5 @@
 
-import { ColorModeProvider, CSSReset, ThemeProvider, useColorMode } from "@chakra-ui/core";
+import { ColorModeProvider, ThemeProvider, useColorMode } from "@chakra-ui/core";
 import { graphql, useStaticQuery } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
   return (    
     <ThemeProvider theme={theme}>
       <ColorModeProvider>
-      <CSSReset />
+      {/* <CSSReset /> */}
       <Header theme={theme} siteTitle={data.site.siteMetadata.title} />
       <div>
         <main bg={colorMode === "light"? "gray.50" : "gray.900"}>{children}</main>
