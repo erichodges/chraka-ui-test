@@ -19,7 +19,6 @@ const Layout = ({ children }) => {
     }
   `)
 
-  
   const colorMode = useColorMode();
 
   return (    

@@ -73,8 +73,6 @@ return (
     <MDXProvider components={component}>
       {element}
     </MDXProvider>
-    
-   
   </AuthProvider>
   )
 }
