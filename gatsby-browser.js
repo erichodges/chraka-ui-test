@@ -1,6 +1,5 @@
 /** @jsx jsx */
-// import { ColorModeProvider, CSSReset, ThemeProvider } from "@chakra-ui/core";
-import { jsx } from '@emotion/core';
+import { css, Global, jsx } from '@emotion/core';
 import { MDXProvider } from '@mdx-js/react';
 import 'focus-visible/dist/focus-visible';
 import { navigate } from "gatsby";
@@ -11,16 +10,16 @@ require("typeface-asap");
 require("typeface-roboto");
 
 
-// const GlobalStyles = css`
-//   /*
-//     This will hide the focus indicator if the element receives focus    via the mouse,
-//     but it will still show up on keyboard focus.
-//   */
-//   .js-focus-visible :focus:not([data-focus-visible-added]) {
-//      outline: none;
-//      box-shadow: none;
-//    }
-// `;
+const GlobalStyles = css`
+  /*
+    This will hide the focus indicator if the element receives focus    via the mouse,
+    but it will still show up on keyboard focus.
+  */
+  .js-focus-visible :focus:not([data-focus-visible-added]) {
+     outline: none;
+     box-shadow: none;
+   }
+`;
 
 // dark themes: vsDark, dracula, duotoneDark (default), nightOwl, oceanicNext
 /* eslint-disable */
@@ -70,7 +69,7 @@ return (
     auth0_domain="dev-i61q270i.auth0.com"
     auth0_client_id="Gj8QSVdFBAQl3mFMapU5nH48qoybCygK"
     >
-    {/* <Global style={GlobalStyles} /> */}
+    <Global style={GlobalStyles} />
     <MDXProvider components={component}>
       {element}
     </MDXProvider>
