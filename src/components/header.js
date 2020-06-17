@@ -14,7 +14,6 @@ const Login = () => {
     font: 'Roboto !important',
     fontWeight: '600',
     fontSize: '1.05rem'
-
   }
 
   if (isAuthenticated()) {
@@ -33,7 +32,6 @@ const Login = () => {
 }
 
 const Header = props => {
-  console.log(props.theme);
   
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
