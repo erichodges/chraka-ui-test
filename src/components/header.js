@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, Heading, IconButton, Stack, Text, useColorMode, useDisclosure } from "@chakra-ui/core";
 import { css, jsx } from '@emotion/core';
+import styled from "@emotion/styled";
 import { Link } from "gatsby";
 import React from "react";
 import { useAuth } from "react-use-auth";
@@ -31,12 +32,32 @@ const Login = () => {
   }
 }
 
+const ShowHamburger = styled.div`
+  @media screen and (min-width: 30rem) {
+    display: block;
+    }
+
+  @media screen and (min-width: 48rem) {
+    display: none;
+    }
+`;
+
+const ShowMenuItems = styled.div`
+  @media screen and (min-width: 48rem) {
+    display: block;
+    }
+
+  @media screen and (max-width: 48rem) {
+    display: none;
+    }
+`;
 const Header = props => {
   
   const { colorMode, toggleColorMode } = useColorMode();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
-  
+
+
   const iconButtonStyle = {
     outline: 'none',
     boxShadow: 'none',
@@ -77,7 +98,8 @@ const Header = props => {
       {...props}
     >
       <Flex  align="center" >
-        <Box mt={3} ml={1} mr={3} display={{ sm: "block", md: "none" }} ref={btnRef} onClick={onOpen} css={css`cursor: pointer; padding-bottom: 2px`}>
+        <ShowHamburger>
+        <Box mt={3} ml={1} mr={3}  ref={btnRef} onClick={onOpen} css={css`cursor: pointer; padding-bottom: 2px`}>
           <svg
             fill={colorMode === "light"? "black" : "#ccc"}
             width="17px"
@@ -89,6 +111,7 @@ const Header = props => {
             <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
           </svg>
         </Box>
+        </ShowHamburger>
         {/* ====== Drawer Section ====== */}
         <Flex align="center" ml={1}>         
           <Drawer
@@ -154,22 +177,23 @@ const Header = props => {
       /> 
 
       <Box
-        display={{ xs: "none", sm: "none", md: "flex", lg: 'flex'}}
+        display={{ sm: "none", md: "flex"}}
         width={{ sm: "full", md: "auto" }}
         alignContent="center"
         alignItems="center"
-        // flexGrow={1}
       >
-        <Box display="flex" color={colorMode === "light"? "black" : "#ccc"} alignContent="center" alignItems="center" mx={5}>
-        <Link to="/docs/getting-started">
-        <Box><Text  style={menuItemStyle} mt={{ base: 4, md: 0 }} mr={4} display="block">Docs &nbsp;</Text></Box>
-        </Link>
-        
-        {/* <MenuItems>Examples</MenuItems> */}
+        <ShowMenuItems>
+          <Box display="flex" color={colorMode === "light"? "black" : "#ccc"} alignContent="center" alignItems="center" mx={5}>
+            <Link to="/docs/getting-started">
+            <Box><Text  style={menuItemStyle} mt={{ base: 4, md: 0 }} mr={4} display="block">Docs &nbsp;</Text></Box>
+            </Link>
+            
+            {/* <MenuItems>Examples</MenuItems> */}
 
-        <Box><Text style={menuItemStyle} mt={{ base: 4, md: 0 }} mr={4} display="block"><a href="https://github.com/Swizec/useAuth">GitHub &nbsp;</a></Text></Box>
-        <Login />
-        </Box>
+            <Box><Text style={menuItemStyle} mt={{ base: 4, md: 0 }} mr={4} display="block"><a href="https://github.com/Swizec/useAuth">GitHub &nbsp;</a></Text></Box>
+            <Login />
+          </Box>
+        </ShowMenuItems>
         <Box
           display={{ xs: "none", sm: "none", md: "flex" }}
           mt={{ base: 4, md: 0 }}
