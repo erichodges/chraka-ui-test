@@ -33,6 +33,9 @@ const Login = () => {
 }
 
 const ShowHamburger = styled.div`
+  margin: 0;
+  paddiing: 0;
+  
   @media screen and (min-width: 30rem) {
     display: block;
     }
@@ -51,6 +54,7 @@ const ShowMenuItems = styled.div`
     display: none;
     }
 `;
+
 const Header = props => {
   
   const { colorMode, toggleColorMode } = useColorMode();
@@ -99,10 +103,11 @@ const Header = props => {
     >
       <Flex  align="center" >
         <ShowHamburger>
-        <Box mt={3} ml={1} mr={3}  ref={btnRef} onClick={onOpen} css={css`cursor: pointer; padding-bottom: 2px`}>
+        <Box mt=".7rem" ml=".5rem" mr={4}  ref={btnRef} onClick={onOpen} css={css`cursor: pointer; padding-bottom: 2px;`}>
           <svg
             fill={colorMode === "light"? "black" : "#ccc"}
-            width="17px"
+            width="20px"
+            height="20px"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
             style={{cursor: 'pointer'}}
@@ -113,7 +118,7 @@ const Header = props => {
         </Box>
         </ShowHamburger>
         {/* ====== Drawer Section ====== */}
-        <Flex align="center" ml={1}>         
+        <Flex align="center" ml=".4rem">         
           <Drawer
           isOpen={isOpen}
           placement="left"
