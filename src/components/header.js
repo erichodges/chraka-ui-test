@@ -176,7 +176,7 @@ const Header = props => {
         ml="2"
         fontSize="20px"
         aria-label={`Switch to ${
-          colorMode === "light" ? "dark" : "light"
+          colorMode === "light" ? "light" : "dark"
           } mode`
         }            
       /> 
@@ -214,7 +214,7 @@ const Header = props => {
             ml="2"
             fontSize="20px"
             aria-label={`Switch to ${
-              colorMode === "light" ? "dark" : "light"
+              colorMode === "light" ? "light" : "dark"
               } mode`
             }            
           />          
