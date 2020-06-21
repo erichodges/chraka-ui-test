@@ -103,19 +103,19 @@ const Header = props => {
     >
       <Flex  align="center" >
         <ShowHamburger>
-        <Box mt=".7rem" ml=".5rem" mr={4}  ref={btnRef} onClick={onOpen} css={css`cursor: pointer; padding-bottom: 2px;`}>
-          <svg
-            fill={colorMode === "light"? "black" : "#ccc"}
-            width="20px"
-            height="20px"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-            style={{cursor: 'pointer'}}
-          >
-            <title>Menu</title>
-            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-          </svg>
-        </Box>
+          <Box mt=".7rem" ml=".5rem" mr={4}  ref={btnRef} onClick={onOpen} css={css`cursor: pointer; padding-bottom: 2px;`}>
+            <svg
+              fill={colorMode === "light"? "black" : "#ccc"}
+              width="20px"
+              height="20px"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+              style={{cursor: 'pointer'}}
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </Box>
         </ShowHamburger>
         {/* ====== Drawer Section ====== */}
         <Flex align="center" ml=".4rem">         
@@ -203,7 +203,6 @@ const Header = props => {
           display={{ xs: "none", sm: "none", md: "flex" }}
           mt={{ base: 4, md: 0 }}
         >
-          
           <IconButton
             style={iconButtonStyle}
             icon={colorMode === "light" ? "moon" : "sun"}
@@ -219,9 +218,7 @@ const Header = props => {
             }            
           />          
          </Box>
-      </Box>
-
-     
+      </Box> 
     </Flex>
   );
 };
