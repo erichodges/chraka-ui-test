@@ -6,8 +6,6 @@ import React from "react";
 import theme from "./gatsby-plugin-chakra-ui/theme";
 import Header from "./header";
 
-console.log(theme);
-
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
