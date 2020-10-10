@@ -6,7 +6,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-preload-fonts`,
-    `gatsby-plugin-chakra-ui`,
     {
       resolve: `gatsby-plugin-emotion`,
       options: {},

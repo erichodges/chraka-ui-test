@@ -1,9 +1,8 @@
-const ColorModeScript = require('@chakra-ui/core')
 
-export { wrapRootElement } from './gatsby-browser';
+import { ColorModeScript } from "@chakra-ui/core"
+import React from "react"
+export { wrapRootElement } from "./gatsby-browser"
 
 export const onRenderBody = ({ setPreBodyComponents }) => {
-  setPreBodyComponents([
-    <ColorModeScript initialColorMode="dark" key="chakra-ui-no-flash" />,
-  ])
+  setPreBodyComponents([<ColorModeScript key="chakra-ui-no-flash" />])
 }

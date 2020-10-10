@@ -1,5 +1,5 @@
 
-import { ChakraProvider, CSSReset, useColorMode } from "@chakra-ui/core";
+import { Box, ChakraProvider } from "@chakra-ui/core";
 import { graphql, useStaticQuery } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
@@ -17,19 +17,18 @@ const Layout = ({ children }) => {
     }
   `)
 
-  const colorMode = useColorMode();
+  // const colorMode = useColorMode();
 
   return (    
     <ChakraProvider theme={theme}>
-      
-      <CSSReset />
       <Header theme={theme} siteTitle={data.site.siteMetadata.title} />
       <div>
-        <main bg={colorMode === "light"? "gray.50" : "gray.900"}>{children}</main>
+        <Box as main>
+          {children}
+        </Box>
         <footer>
         </footer>
-      </div>
-      
+      </div>      
     </ChakraProvider>
   )
 }
