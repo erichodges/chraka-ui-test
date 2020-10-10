@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex, Heading, IconButton, Stack, Text, useColorMode, useDisclosure } from "@chakra-ui/core";
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { css, jsx } from '@emotion/core';
 import styled from "@emotion/styled";
 import { Link } from "gatsby";
@@ -168,7 +169,7 @@ const Header = props => {
       <IconButton
         onClick={toggleColorMode}
         display={{ xs: "block", sm: "block", md: "none" }}
-        icon={colorMode === "light" ? "moon" : "sun"}
+        icon={colorMode === "light" ? MoonIcon : SunIcon}
         style={iconButtonStyle}
         isRound="true"
         variant="ghost"
@@ -205,7 +206,7 @@ const Header = props => {
         >
           <IconButton
             style={iconButtonStyle}
-            icon={colorMode === "light" ? "moon" : "sun"}
+            icon={colorMode === "light" ? MoonIcon : SunIcon}
             onClick={toggleColorMode}
             isRound="true"
             variant="ghost"

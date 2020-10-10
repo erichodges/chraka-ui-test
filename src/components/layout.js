@@ -1,5 +1,5 @@
 
-import { ColorModeProvider, CSSReset, ThemeProvider, useColorMode } from "@chakra-ui/core";
+import { ChakraProvider, CSSReset, useColorMode } from "@chakra-ui/core";
 import { graphql, useStaticQuery } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
@@ -20,8 +20,8 @@ const Layout = ({ children }) => {
   const colorMode = useColorMode();
 
   return (    
-    <ThemeProvider theme={theme}>
-      <ColorModeProvider>
+    <ChakraProvider theme={theme}>
+      
       <CSSReset />
       <Header theme={theme} siteTitle={data.site.siteMetadata.title} />
       <div>
@@ -29,8 +29,8 @@ const Layout = ({ children }) => {
         <footer>
         </footer>
       </div>
-      </ColorModeProvider>
-    </ThemeProvider>
+      
+    </ChakraProvider>
   )
 }
 
