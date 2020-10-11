@@ -1,4 +1,5 @@
 import { Box, Button, Heading, useColorMode } from "@chakra-ui/core";
+import { ArrowForwardIcon, LockIcon } from '@chakra-ui/icons';
 import { css } from '@emotion/core';
 import { Link } from "gatsby";
 import React from "react";
@@ -39,7 +40,7 @@ const IndexPage = (props) => {
       <Box bg={colorMode === "light"? "gray.50" : "gray.900"} h="95vh" w="100vw" display="flex" flexDir="column" alignItems="center" justifyContent="center">
         <Box>
           <Box display="flex" alignItems="center" mt="-12rem">
-            {/* <IconButton
+            <LockIcon
               icon="lock"
               aria-label='Lock icon'
               isRound="true"
@@ -48,7 +49,7 @@ const IndexPage = (props) => {
               padding="0"
               ml="-.3rem"
               fontSize="36px"            
-            /> */}
+            />
             <Heading as="h1" color={colorMode === "light"? "#000" : "#ccc"} fontSize={50} className="logo-style" css={logoStyle}>useAuth</Heading>
           </Box>
           <Heading as="h2" style={h2Style} color={colorMode === "light"? "#000" : "#ccc"} size="lg" mb={2}
@@ -60,7 +61,7 @@ const IndexPage = (props) => {
           <span style={colorMode === "light"? codeStyleLight : codeStyleDark}>npm i react-use-auth</span>          
           <br />
           <Link to="/docs/getting-started">
-            <Button size="lg" style={buttonStyle} mt={4} bg="#008D19" color="#fff" _hover={{ bg: "#00A51D" }} rightIcon="arrow-forward">Get Started</Button>
+            <Button size="lg" style={buttonStyle} mt={4} bg="#008D19" color="#fff" _hover={{ bg: "#00A51D" }}>Get Started &nbsp;<ArrowForwardIcon  boxSize={6}/></Button>
           </Link>
         </Box>
       </Box>

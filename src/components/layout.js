@@ -6,6 +6,8 @@ import React from "react";
 import theme from "./gatsby-plugin-chakra-ui/theme";
 import Header from "./header";
 
+
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -16,14 +18,14 @@ const Layout = ({ children }) => {
       }
     }
   `)
+  
 
-  // const colorMode = useColorMode();
 
   return (    
     <ChakraProvider theme={theme}>
-      <Header theme={theme} siteTitle={data.site.siteMetadata.title} />
+      <Header siteTitle={data.site.siteMetadata.title} />
       <div>
-        <Box as main>
+        <Box as="main">
           {children}
         </Box>
         <footer>

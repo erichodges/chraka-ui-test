@@ -7,6 +7,7 @@ import { Link } from "gatsby";
 import React from "react";
 import { useAuth } from "react-use-auth";
 
+
 const Login = () => {
   const { isAuthenticated, login, logout } = useAuth();
   const { colorMode } = useColorMode();
@@ -169,7 +170,7 @@ const Header = props => {
       <IconButton
         onClick={toggleColorMode}
         display={{ xs: "block", sm: "block", md: "none" }}
-        icon={colorMode === "light" ? MoonIcon : SunIcon}
+        icon={colorMode === "light" ? <MoonIcon /> : <SunIcon />}
         style={iconButtonStyle}
         isRound="true"
         variant="ghost"

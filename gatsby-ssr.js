@@ -4,5 +4,5 @@ import React from "react"
 export { wrapRootElement } from "./gatsby-browser"
 
 export const onRenderBody = ({ setPreBodyComponents }) => {
-  setPreBodyComponents([<ColorModeScript key="chakra-ui-no-flash" />])
+  setPreBodyComponents([<ColorModeScript initialColorMode="light" key="chakra-ui-no-flash" />])
 }
