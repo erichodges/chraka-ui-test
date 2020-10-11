@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
     <ChakraProvider theme={theme}>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div>
-        <Box as="main">
+        <Box as="Main">
           {children}
         </Box>
         <footer>

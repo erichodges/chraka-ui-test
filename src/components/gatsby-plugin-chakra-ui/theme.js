@@ -1,10 +1,13 @@
-import { theme as defaultTheme } from '@chakra-ui/core';
+import { extendTheme } from '@chakra-ui/core';
 import CustomColors from './CustomColor';
 
-const theme = {
-  ...defaultTheme,
+const theme = extendTheme ({
+  // ...defaultTheme,
+  config: {
+    useSystemColorMode: true
+  },
   colors: {
-    ...defaultTheme.colors,
+    // ...defaultTheme.colors,
     ...CustomColors, // add a file with custom colors and spread them here or just list them
   },
   breakpoints: ["30rem", "48rem", "62rem", "80rem"],
@@ -71,6 +74,6 @@ const theme = {
     "32": "16rem",
   },
   
-};
+});
 
 export default theme;
